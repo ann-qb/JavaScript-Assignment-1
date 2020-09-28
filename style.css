@@ -161,7 +161,7 @@ table input {
 .text-wrap p {
     padding-top: 15px;
     text-align: justify;
-    }
+}
 
 .image-wrap {
     width: 40%;
@@ -194,12 +194,12 @@ h3 {
     background-color: #f1f1f1;
     width: 100%;
     padding: 20px;
-    text-align: center;
 }
 
 #contact-form p {
     font-size: small;
     color: #ff0000;
+    text-align: left;
 }
 
 #contact-form > div {
