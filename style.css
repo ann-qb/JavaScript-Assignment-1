@@ -223,7 +223,7 @@ p#message-counter {
 .label-div {
     width: 20%;
     text-align: left;
-    padding: 10px 10px 0 0;
+    padding: 10px 0 0 10px;
 }
 
 .form-div {
@@ -239,6 +239,7 @@ div#phone-num {
 
 #country-code {
     width: 8%;
+    padding: 5px;
 }
 #num {
     width: 92%;
@@ -248,9 +249,18 @@ div#phone-num {
     display: inline-block;
     width: 100%;
     margin: 10px 0;
-    padding: 10px 5px;
+    padding: 10px 20px;
     border-color: #ffffff;
     outline: none;
+}
+
+.form-field:hover {
+    border: 2px solid #afafaf!important;
+    /* box-shadow: 10px #4e4e4e; */
+}
+
+.form-field:focus {
+    border: 1px solid #1d04fc!important;
 }
 
 #form-submit {
