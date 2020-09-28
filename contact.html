@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="js/menu.js"></script>
     <script src="js/blogposts.js"></script>
+    <script src="js/contact.js"></script>
 </head>
 <body>
     <header class="header-div">
@@ -39,11 +40,11 @@
                     <div class="contact-form" id="contact-form">
                         <div>
                             <div class="label-div">
-                                <label for="userName">Name</label>
+                                <label for="userName">Name<span class="required-field">*</span></label>
                             </div>
                             <div class="form-div" id="name-container">
                                 <input type="text" name="userName" placeholder="Name" class="form-field" id="name" required>
-                                <p>Error Message</p>
+                                <p id="name-msg"></p>
                             </div>
                         </div>
                         <div>
@@ -51,31 +52,39 @@
                                 <label for="subject">Subject</label>
                             </div>
                             <div class="form-div" id="subject-container">
-                                <input type="text" name="subject" placeholder="Subject" class="form-field" id="subject">
+                                <input type="text" name="subject" placeholder="Subject" class="form-field" id="subject" maxlength="25">
+                                <p id="subject-msg">Maximum 25 characters</p>
                             </div>
                         </div>
                         <div>
                             <div class="label-div">
-                                <label for="phoneNumber">Phone Number</label>
+                                <label for="phoneNumber">Phone Number<span class="required-field">*</span></label>
                             </div>
                             <div class="form-div" id="phone-container">
-                                <input type="tel" name="phoneNumber" placeholder="+91 XXXXXXXXXX" class="form-field" id="num" required>
+                                <div id="phone-num">
+                                    <input type="text" name="country-code" disabled value="+91" class="form-field" id="country-code">
+                                    <input type="tel" name="phoneNumber" placeholder="XXXXXXXXXX" class="form-field" id="num" required>
+                                </div>
+                                <p id="num-msg"></p>
                             </div>
                         </div>
                         <div>
                             <div class="label-div">
-                                <label for="emailId">Email ID</label>
+                                <label for="emailId">Email ID<span class="required-field">*</span></label>
                             </div>
                             <div class="form-div"  id="email-container">
                                 <input type="email" name="emailId" placeholder="Email ID" class="form-field" required id="email">
+                                <p id="email-msg"></p>
                             </div>
                         </div>
                         <div>
                             <div class="label-div">
-                                <label for="message">Message</label>
+                                <label for="message">Message<span class="required-field">*</span></label>
                             </div>
                             <div class="form-div" id="message-container">
-                                <input type="textarea" name="message" placeholder="Message" class="form-field" id="message" required>
+                                <textarea name="message" id="message" placeholder="Message" class="form-field" cols="15" rows="5" required maxlength="255" onkeyup="charCounter()"></textarea>
+                                
+                                <p id="message-counter">255 characters remaining.</p>
                             </div>
                         </div>
                         <div>

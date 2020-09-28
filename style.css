@@ -202,6 +202,15 @@ h3 {
     text-align: left;
 }
 
+p#subject-msg,
+p#message-counter {
+    color: #000000;
+}
+
+.required-field {
+    color: #ff0000;
+}
+
 #contact-form > div {
     width: 100%;
     display: flex;
@@ -213,7 +222,7 @@ h3 {
 
 .label-div {
     width: 20%;
-    text-align: right;
+    text-align: left;
     padding: 10px 10px 0 0;
 }
 
@@ -221,6 +230,18 @@ h3 {
     width: 80%;
     display: flex;
     flex-flow: column wrap;
+}
+
+div#phone-num {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#country-code {
+    width: 8%;
+}
+#num {
+    width: 92%;
 }
 
 .form-field {
