@@ -3,6 +3,7 @@ blogPostsData.open("GET", "./api/blogposts.json");
 blogPostsData.send();
 blogPostsData.addEventListener("load", blog);
 
+//Load blog posts dynamically from blogposts.json
 function blog() {
     const blogPosts = JSON.parse(blogPostsData.response);
     const posts = document.getElementById('posts');

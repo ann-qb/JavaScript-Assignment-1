@@ -1,9 +1,9 @@
 const homePageData = new XMLHttpRequest();
 homePageData.open("GET", "./api/home.json");
 homePageData.send();
-homePageData.addEventListener("load", home);
+homePageData.addEventListener("load", loadHomeData);
 
-function home() {
+function loadHomeData() {
     const homeData = JSON.parse(homePageData.response);
     const content = document.getElementById('page-content');
     content.innerHTML = homeData['text-content'];
@@ -13,27 +13,27 @@ function home() {
         columnHead.innerText = homeData['table-headings'][i];
         headingRow.appendChild(columnHead);
     }
-    const toggle = document.getElementById('toggle-content');
+    const toggleReadButton = document.getElementById('toggle-content');
     content.style.maxHeight = '225px';
     if(content.scrollHeight > content.clientHeight) {
-        toggle.style.display = 'block';
-        toggle.innerHTML = 'Read More';
+        toggleReadButton.style.display = 'block';
+        toggleReadButton.innerHTML = 'Read More';
     }
 }
 
 let maxHeight;
 
-function read() {
+function readMore() {
     const textContent = document.getElementById('page-content');
-    const button = document.getElementById('toggle-content');
+    const toggleReadMoreButton = document.getElementById('toggle-content');
     
-    if(button.innerHTML === 'Read More') {
-        button.innerHTML = 'Read Less';
+    if(toggleReadMoreButton.innerHTML === 'Read More') {
+        toggleReadMoreButton.innerHTML = 'Read Less';
         maxHeight = textContent.style.maxHeight;
         textContent.style.maxHeight = textContent.scrollHeight+'px';
     }
     else{
-        button.innerHTML = 'Read More';
+        toggleReadMoreButton.innerHTML = 'Read More';
         textContent.style.maxHeight = maxHeight;
     }
 }

@@ -17,6 +17,7 @@
 //     })
 // })
 
+//Function triggers on clicking 'Send Message' button
 function validateSend() {
     const name = nameValidate();
     const num =  numValidate();
@@ -44,6 +45,7 @@ function validateSend() {
     // }    
 }
 
+//To validate name field
 function nameValidate() {
     const name = document.getElementById('name');
     const nameError = document.getElementById('name-msg');
@@ -59,6 +61,7 @@ function nameValidate() {
     }
 }
 
+//To validate phone number
 function numValidate() {
     const num = document.getElementById('num');
     const numError = document.getElementById('num-msg');
@@ -73,6 +76,7 @@ function numValidate() {
     }
 }
 
+//To validates email id
 function emailValidate() {
     const email = document.getElementById('email');
     const emailError = document.getElementById('email-msg');
@@ -87,6 +91,7 @@ function emailValidate() {
     }
 }
 
+//To validate message
 function messageValidate() {
     const message = document.getElementById('message');
     const counter = document.getElementById('message-counter');
@@ -100,6 +105,7 @@ function messageValidate() {
     }
 }
 
+//Shows remaining character count for message textarea
 function charCounter() {
     const message = document.getElementById('message');
     const counter = document.getElementById('message-counter');

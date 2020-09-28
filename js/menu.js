@@ -1,3 +1,9 @@
+let menuData = new XMLHttpRequest();
+menuData.open("GET", "./api/menu.json");
+menuData.send();
+menuData.addEventListener("load", menu);
+
+//Load menu, page title, and page heading dynamically from menu.json
 function menu(){
     menuOptions = JSON.parse(menuData.response);
     const list = document.createElement('ul');
@@ -24,8 +30,3 @@ function menu(){
     const nav = document.getElementById('nav');
     nav.appendChild(list);
 }
-
-let menuData = new XMLHttpRequest();
-menuData.open("GET", "./api/menu.json");
-menuData.send();
-menuData.addEventListener("load", menu);
