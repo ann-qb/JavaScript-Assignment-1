@@ -1,1 +1,0 @@
-# JavaScript-Assignment-1

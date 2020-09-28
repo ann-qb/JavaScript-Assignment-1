@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RMedia</title>
+    <title id="page-title"></title>
     <link rel="stylesheet" href="style.css">
+    <script src="js/menu.js"></script>
+    <script src="js/blogposts.js"></script>
 </head>
 <body>
     <header class="header-div">
@@ -16,19 +18,13 @@
     <div class="content">
         <div class="container">
             <div class="left-sec">
-                <nav>
-                    <ul>
-                        <li><a href="http://">Home</a></li>
-                        <li><a href="http://">About</a></li>
-                        <li><a href="http://">Service</a></li>
-                        <li><a href="http://">Contact</a></li>
-                    </ul>
+                <nav id="nav">
                 </nav>
             </div>
             <div class="middle-sec">
                 <div class="top-sec">
                     <div class="text-wrap">
-                        <h2>Services</h2>
+                        <h2 id="page-heading"></h2>
                         <p>
                             Lorem lpsum is simply dummy text of the printing and typesetting industry. 
                             Lorem lpsum has been the industry's standard dummy text ever since the 1500's,when an
@@ -97,10 +93,7 @@
             </div>
             <div class="right-sec">
                 <h3>Latest Posts</h3>
-                <ul>
-                    <li><a href=""><img src="images/post-image.jpg" alt="Post Image"></a></li>
-                    <li><a href=""><img src="images/post-image.jpg" alt="Post Image"></a></li>
-                    <li><a href=""><img src="images/post-image.jpg" alt="Post Image"></a></li>
+                <ul id="posts">
                 </ul>
             </div>
         </div>

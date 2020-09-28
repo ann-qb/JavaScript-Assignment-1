@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title"></title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/menu.js"></script>
+    <script src="js/blogposts.js"></script>
+</head>
+<body>
+    <header class="header-div">
+        <div class="container">
+            <h1><a href=""><img src="images/logo.jpg" alt="RMedia"></a></h1>
+            <input type="search" name="search" id="search" placeholder="Search...">
+        </div>
+    </header>
+    <div class="content">
+        <div class="container">
+            <div class="left-sec" id="nav-menu">
+                <nav id="nav">
+                </nav>
+            </div>
+            <div class="middle-sec">
+                <div class="top-sec">
+                    <div class="text-wrap">
+                        <h2 id="page-heading"></h2>
+                        <p>
+                            Lorem lpsum is simply dummy text of the printing and typesetting industry. 
+                            Lorem lpsum has been the industry's standard dummy text ever since the 1500's,when an
+                            unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </p>
+                    </div>
+                    <div class="image-wrap">
+                        <img src="images/main-image.jpg" alt="RMedia Image">
+                    </div>
+                </div>  
+                <div class="bottom-sec">
+                    <div class="contact-form" id="contact-form">
+                        <div>
+                            <div class="label-div">
+                                <label for="userName">Name</label>
+                            </div>
+                            <div class="form-div" id="name-container">
+                                <input type="text" name="userName" placeholder="Name" class="form-field" id="name" required>
+                                <p>Error Message</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="label-div">
+                                <label for="subject">Subject</label>
+                            </div>
+                            <div class="form-div" id="subject-container">
+                                <input type="text" name="subject" placeholder="Subject" class="form-field" id="subject">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="label-div">
+                                <label for="phoneNumber">Phone Number</label>
+                            </div>
+                            <div class="form-div" id="phone-container">
+                                <input type="tel" name="phoneNumber" placeholder="+91 XXXXXXXXXX" class="form-field" id="num" required>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="label-div">
+                                <label for="emailId">Email ID</label>
+                            </div>
+                            <div class="form-div"  id="email-container">
+                                <input type="email" name="emailId" placeholder="Email ID" class="form-field" required id="email">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="label-div">
+                                <label for="message">Message</label>
+                            </div>
+                            <div class="form-div" id="message-container">
+                                <input type="textarea" name="message" placeholder="Message" class="form-field" id="message" required>
+                            </div>
+                        </div>
+                        <div>
+                            <button id="form-submit" onclick="validateSend()">Send Message</button> 
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div class="right-sec">
+                <h3>Latest Posts</h3>
+                <ul id="posts">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <ul>
+                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

@@ -16,9 +16,10 @@
     },
     {
         "label": "Products",
-        "path": "product.html",
+        "path": "products.html",
         "not_found": true
-    },{
+    },
+    {
         "label": "Contact",
         "path": "contact.html",
         "not_found": false

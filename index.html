@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RMedia</title>
+    <title id="page-title"></title>
     <link rel="stylesheet" href="style.css">
     <script src="js/menu.js"></script>
+    <script src="js/blogposts.js"></script>
+    <script src="js/index.js"></script>
 </head>
 <body>
     <header class="header-div">
@@ -22,17 +24,20 @@
             </div>
             <div class="middle-sec">
                 <div class="top-sec">
-                    <div class="text-wrap">
-                        <h2>RMedia</h2>
-                        <p>
-                            Lorem lpsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem lpsum has been the industry's standard dummy text ever since the 1500's,when an
-                            unknown printer took a galley of type and scrambled it to make a type specimen book.It has 
-                            survived not only five centuries, but also the leap  into electronic typesetting,remaining
-                            1960s with the release ofLetraset sheets containing lorem lpsum passages,and more recently with desktop publishing software
-                            like Aldus Pagemker including versions of lorem lpsum.
-                        </p>
-                        <p>why do use it?</p>
+                    <div class="text-wrap" id="text-wrap">
+                        <h2 id="page-heading"></h2>
+                        <div id="page-content">
+                            <!-- <p>
+                                Lorem lpsum is simply dummy text of the printing and typesetting industry. 
+                                Lorem lpsum has been the industry's standard dummy text ever since the 1500's,when an
+                                unknown printer took a galley of type and scrambled it to make a type specimen book.It has 
+                                survived not only five centuries, but also the leap  into electronic typesetting,remaining
+                                1960s with the release ofLetraset sheets containing lorem lpsum passages,and more recently with desktop publishing software
+                                like Aldus Pagemker including versions of lorem lpsum.
+                            </p>
+                            <p>why do use it?</p> -->
+                        </div>
+                        <button onclick="read()" id="toggle-content"></button>
                     </div>
                     <div class="image-wrap">
                         <img src="images/main-image.jpg" alt="RMedia Image">
@@ -41,11 +46,11 @@
                 <div class="bottom-sec">
                     <table>
                         <thead>
-                            <tr>
+                            <tr id="table-heading">
+                                <!-- <th>Lorem</th>
                                 <th>Lorem</th>
                                 <th>Lorem</th>
-                                <th>Lorem</th>
-                                <th>Lorem</th>
+                                <th>Lorem</th> -->
                             </tr>
                         </thead>
                         <tbody>
@@ -92,10 +97,7 @@
             </div>
             <div class="right-sec">
                 <h3>Latest Posts</h3>
-                <ul>
-                    <li><a href=""><img src="images/post-image.jpg" alt="Post Image"></a></li>
-                    <li><a href=""><img src="images/post-image.jpg" alt="Post Image"></a></li>
-                    <li><a href=""><img src="images/post-image.jpg" alt="Post Image"></a></li>
+                <ul id="posts">
                 </ul>
             </div>
         </div>

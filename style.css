@@ -70,12 +70,13 @@ footer ul li {
     background-color: #f1f1f1;
     height: 100vh;
     float: left;
+    overflow-y: auto;
 }
 
 .middle-sec {
     width: 64%;
     background-color: #ffffff;
-    height: 100%;
+    height: 100vh;
     float: left;
 }
 
@@ -95,7 +96,7 @@ a {
 
 .top-sec {
     width: 100%;
-    padding: 20px;
+    padding: 20px;      
 }
 
 .bottom-sec {
@@ -139,6 +140,24 @@ table input {
     padding-right: 15px;
 }
 
+#page-content {
+    
+    display: block;
+    overflow: hidden;
+}
+
+#toggle-content {
+    margin: 10px 0;
+    padding: 5px 10px;
+    display: none;
+    width: 100px;
+    height: 30px;
+    background-color: #95E1F9;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #ffffff;
+}
+
 .text-wrap p {
     padding-top: 15px;
     text-align: justify;
@@ -164,4 +183,66 @@ h3 {
     text-emphasis: none;
     text-align: center;
     padding: 10px 10px;
+}
+
+.contact-form {
+    margin-top: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+    float: left;
+    background-color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+#contact-form p {
+    font-size: small;
+    color: #ff0000;
+}
+
+#contact-form > div {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: baseline;
+    margin-bottom: 15px;
+}
+
+
+.label-div {
+    width: 20%;
+    text-align: right;
+    padding: 10px 10px 0 0;
+}
+
+.form-div {
+    width: 80%;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.form-field {
+    display: inline-block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px 5px;
+    border-color: #ffffff;
+    outline: none;
+}
+
+#form-submit {
+    display: block;
+    width: 150px;
+    height: 30px;
+    background-color: #95E1F9;
+    cursor: pointer;
+    border: 1px solid #ffffff;
+    margin: auto;
+}
+
+#toggle-content:hover,
+#form-submit:hover {
+    background-color: #66c5e4;
 }
