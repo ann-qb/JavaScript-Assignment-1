@@ -1,0 +1,454 @@
+/*****************************
+        1. GENERAL
+*****************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex-box {
+    display: flex;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+h3 {
+    text-emphasis: none;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+/*****************************
+        2. HEADER
+*****************************/
+
+header {
+    height: 120px;
+    width: 100%;
+    background-color: #95E1F9;
+    border-bottom: 30px solid #66c5e4;
+}
+
+header .container {
+    padding: 20px;
+}
+
+header .flex-box {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+header h1 {
+    height: 120px;
+    width: 100px;
+}
+
+#search {
+    outline: none;
+    margin-top: 10px;
+    height: 40px;
+    width: 200px;
+    border-radius: 20px;
+    border: 3px solid #66c5e4;
+    padding-left: 15px;
+    box-shadow: 2px 3px 2px 0 rgba(0, 0, 0, 0.4);
+}
+
+/*****************************
+        3. BODY
+*****************************/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+#menu-btn {
+    display: none;
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 15px;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    outline: none;
+}
+
+#menu-btn:hover {
+    background-color: #c7c7c7;
+}
+
+#main-content .flexbox {
+    flex-flow: row nowrap;
+    justify-content: stretch;
+
+}
+
+#menu-sec, 
+#posts-sec {
+    width: 18%;
+    background-color: #f1f1f1;
+    overflow-y: auto;
+}
+
+#posts-sec {
+    height: 650px;
+}
+
+#posts-sec ul {
+    text-align: center;
+}
+
+#posts-sec li {
+    padding-bottom: 10px;
+}
+
+#content-sec {
+    width: 64%;
+    background-color: #ffffff;
+    flex-flow: row wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+#nav {
+    display: block;
+}
+
+nav li {
+    padding: 15px;
+    border-bottom: 2px solid #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#top-sec {
+    width: 100%;
+    padding: 20px 20px 0;      
+}
+
+#text-wrap {
+    width: 60%;
+    padding-right: 15px;
+}
+
+#page-content {
+    display: block;
+    overflow: hidden;
+}
+
+#page-content p {
+    padding-top: 15px;
+    text-align: justify;
+}
+
+#toggle-content {
+    margin: 10px 0;
+    padding: 5px 10px;
+    display: none;
+    width: 100px;
+    height: 30px;
+    background-color: #95E1F9;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #ffffff;
+}
+
+#image-wrap {
+    margin-top: 45px;
+    width: 40%;
+    text-align: center;
+}
+
+#bottom-sec {
+    flex-flow: row nowrap;
+    width: 100%;
+    padding: 20px;
+}
+
+/*****************************
+        4. TABLE
+*****************************/
+
+table {
+    width: 100%;
+    text-align: left;
+    padding-top: 20px;
+}
+
+table thead tr {
+    background-color: #66c5e4;
+}
+
+table thead tr th {
+    padding: 10px;
+}
+
+table tbody tr {
+    background-color: #95E1F9;
+}
+
+table tbody tr td {
+    padding: 5px 10px;
+}
+
+table tbody tr td:last-child {
+    text-align: center;
+}
+
+table input {
+    padding: 2px 4px;
+}
+
+/*****************************
+        4. FOOTER
+*****************************/
+
+footer {
+    width: 100%;
+    background-color: #c7c7c7;
+}
+
+footer > ul .flex-box {
+    flex-flow: row nowrap;
+}
+
+footer ul {
+    list-style: none;
+    width: 100%;
+}
+
+footer ul li {
+    width: 25%;
+    padding: 20px;
+}
+
+/*****************************
+        4. CONTACT FORM
+*****************************/
+
+#contact-form {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+    background-color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+#contact-form p {
+    font-size: small;
+    color: #ff0000;
+    text-align: left;
+}
+
+p#subject-msg,
+p#message-counter {
+    color: #000000;
+}
+
+.required-field {
+    color: #ff0000;
+}
+
+#contact-form > div {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: baseline;
+    margin-bottom: 15px;
+}
+
+.label-div {
+    width: 20%;
+    text-align: left;
+    padding: 10px 0 0 10px;
+}
+
+.form-div {
+    width: 80%;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+div#phone-num {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#country-code {
+    width: 8%;
+    padding: 5px;
+    min-width: 35px;
+}
+
+#num {
+    width: 92%;
+}
+
+.form-field {
+    display: inline-block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-color: #ffffff;
+    outline: none;
+}
+
+.form-field:hover {
+    border: 2px solid #afafaf!important;
+    /* box-shadow: 10px #4e4e4e; */
+}
+
+.form-field:focus {
+    border: 1px solid #1d04fc!important;
+}
+
+#form-submit {
+    display: block;
+    width: 150px;
+    height: 30px;
+    background-color: #95E1F9;
+    cursor: pointer;
+    border: 1px solid #ffffff;
+    margin: auto;
+}
+
+#toggle-content:hover,
+#form-submit:hover {
+    background-color: #66c5e4;
+}
+
+/*****************************
+        5. MEDIA QUERIES
+*****************************/
+
+@media (max-width:768px) {
+    .container {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    #menu-btn {
+        display: block;
+    }
+
+    #menu-sec {
+        text-align: center;
+        width: 100%;
+    }
+
+    #nav {
+        display: none;
+    }
+
+    #posts-sec {
+        width: 100%;
+    }
+    
+    #content-sec {
+        width: 100%;
+    }
+
+    footer ul {
+        flex-flow: column wrap;
+    }
+    
+    footer  ul  li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .label-div {
+        width: 30%;
+    }
+    
+    .form-div {
+        width: 70%;
+    }
+}
+
+@media (max-width:480px) {
+    .container {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    header .flex-box {
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    
+    header h1 {
+        height: 60px;
+        width: auto;
+    }
+
+    #search {
+        height: 30px;
+    }
+
+    #menu-btn {
+        display: block;
+    }
+
+    #menu-sec {
+        text-align: center;
+        width: 100%;
+    }
+
+    #nav {
+        display: none;
+    }
+
+    #posts-sec {
+        width: 100%;
+    }
+    
+    #content-sec {
+        width: 100%;
+        height: auto;
+    }
+
+    #top-sec {
+        flex-flow: row wrap;
+    }
+
+    #text-wrap {
+        width: 100%;
+        order: 1;
+    }
+
+    #page-heading {
+        text-align: center;
+    }
+
+    #image-wrap {
+        width: 100%;
+        order: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 0 10px;
+    }
+
+    #contact-form > div {
+        flex-flow: column wrap;
+    }
+
+    .label-div {
+        width: 100%;
+    }
+    
+    .form-div {
+        width: 100%;
+    }
+}

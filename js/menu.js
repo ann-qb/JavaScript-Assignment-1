@@ -8,6 +8,7 @@ function menu(){
     menuOptions = JSON.parse(menuData.response);
     const list = document.createElement('ul');
     const filePath = window.location.pathname.slice(1);
+    console.log(filePath);
     for(let i=0;i<menuOptions.length;i++){
         const listItem = document.createElement('li');
         const listItemAnchor = document.createElement('a');
