@@ -4,10 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>RMedia - Register</title>
+    <link rel="stylesheet" href="css/register.css">
 </head>
 
 <body>
+
+    <div id="register-container">
+        <div id="register-card">
+            <div id="card-header">
+                <h1>RMedia</h1>
+            </div>
+            <form action="" id="register-form">
+                <div class="form-div">
+                    <label for="firstName" class="label">First Name</label>
+                    <input type="text" autofocus required class="form-input">
+                    <p class="error-msg">Error Msg</p>
+                </div>
+                <div class="form-div">
+                    <label for="lastName" class="label">Last Name</label>
+                    <input type="text" required class="form-input">
+                    <p class="error-msg">Error Msg</p>
+                </div>
+                <div class="form-div">
+                    <label for="dateOfBirth" class="label">Date of Birth</label>
+                    <input type="date" required class="form-input">
+                    <p class="error-msg">Error Msg</p>
+                </div>
+                <div class="form-div">
+                    <p class="label">Gender</p>
+                    <div id="gender-labels">
+                        <div class="radio-div">
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Male</label>
+                        </div>
+                        <div class="radio-div">
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label>
+                        </div>
+                        <div class="radio-div">
+                            <input type="radio" id="other" name="gender" value="other">
+                            <label for="other">Other</label>
+                        </div>
+                    </div>
+                    <p class="error-msg">Error Msg</p>
+                </div>
+                <div class="form-div">
+                    <label for="password" class="label">Password</label>
+                    <input type="password" required class="form-input">
+                    <p class="error-msg" id="password">Error Msg</p>
+                </div>
+                <div class="form-div">
+                    <label for="confirm-password" class="label">Confirm Password</label>
+                    <input type="password" required class="form-input">
+                    <p class="error-msg" id="confirm-password">Error Msg</p>
+                </div>
+                <div class="form-div">
+                    <div id="tc">
+                        <input type="checkbox" id="tc-checkbox">
+                        <p id="terms-label">Accept Terms and Conditions</p>
+                    </div>
+                    <p class="error-msg" id="tc-accept">Error Msg</p>
+                    <input type="submit" value="Register" class="form-input" id="register-btn">
+                    <p id="login-link">Already have an account? <a href="login.html">Login</a></p>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
     <script src="js/utility.js"></script>
     <script src="js/menu.js"></script>
 </body>

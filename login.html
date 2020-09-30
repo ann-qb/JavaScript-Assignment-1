@@ -4,12 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>RMedia - Login</title>
+    <link rel="stylesheet" href="css/login.css">
 </head>
 
 <body>
+    <div id="login-container">
+        <div id="login-card">
+            <div id="card-header">
+                <h1>RMedia</h1>
+            </div>
+            <form action="" id="login-form">
+                <p id="error-msg">Error</p>
+                <div class="form-div">
+                    <label for="firstName" class="label">User Name</label>
+                    <input type="text" autofocus required class="form-input">
+                </div>
+                <div class="form-div">
+                    <label for="password" class="label">Password</label>
+                    <input type="password" required class="form-input">
+                    <p id="password"></p>
+                </div>
+                <div class="form-div">
+                    <input type="submit" value="Login" class="form-input" id="login-btn">
+                </div>
+                <div>
+                    <p id="register-link">Not registered? <a href="register.html">Create an account</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <script src="js/utility.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/login.js"></script>
 </body>
 
 </html>

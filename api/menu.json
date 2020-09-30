@@ -1,13 +1,4 @@
-[{
-        "label": "Login",
-        "path": "login.html",
-        "not_found": false
-    },
-    {
-        "label": "Register",
-        "path": "register.html",
-        "not_found": false
-    },
+[
     {
         "label": "Home",
         "path": "home.html",
