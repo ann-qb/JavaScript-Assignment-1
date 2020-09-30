@@ -19,7 +19,9 @@ function loadMenu(menuData) {
         list.appendChild(listItem);
     }
     const nav = document.querySelector('#nav');
-    nav.appendChild(list);
+    if (nav) {
+        nav.appendChild(list);
+    }
     updatePageHeadingAndTitle(menuData);
 }
 
@@ -42,7 +44,9 @@ function updatePageHeadingAndTitle(menuData) {
     menuData.forEach(element => {
         if (element['path'] === filePath) {
             const pageHeading = document.querySelector('#page-heading');
-            pageHeading.innerHTML = element['label'];
+            if (pageHeading) {
+                pageHeading.innerHTML = element['label'];
+            }
             const pageTitle = document.querySelector('title');
             pageTitle.innerHTML = 'RMedia - ' + element['label'];
         }
