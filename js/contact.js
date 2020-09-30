@@ -54,8 +54,8 @@ function validateSend() {
 
 //Validates name field
 function nameValidate() {
-    const name = document.getElementById('name');
-    const nameError = document.getElementById('name-msg');
+    const name = document.querySelector('#name');
+    const nameError = document.querySelector('#name-msg');
     if (name.value.match(nameFormat)) {
         nameError.innerHTML = '';
         return name.value;
@@ -68,8 +68,8 @@ function nameValidate() {
 
 //Validates phone number
 function numValidate() {
-    const num = document.getElementById('num');
-    const numError = document.getElementById('num-msg');
+    const num = document.querySelector('#num');
+    const numError = document.querySelector('#num-msg');
     if (num.value.match(phoneNoFormat)) {
         numError.innerHTML = '';
         return num.value;
@@ -82,8 +82,8 @@ function numValidate() {
 
 //Validates email id
 function emailValidate() {
-    const email = document.getElementById('email');
-    const emailError = document.getElementById('email-msg');
+    const email = document.querySelector('#email');
+    const emailError = document.querySelector('#email-msg');
     if (email.value.match(mailFormat)) {
         emailError.innerHTML = '';
         return email.value;
@@ -96,8 +96,8 @@ function emailValidate() {
 
 //Validates message
 function messageValidate() {
-    const message = document.getElementById('message');
-    const counter = document.getElementById('message-counter');
+    const message = document.querySelector('#message');
+    const counter = document.querySelector('#message-counter');
     if (message.value.length > '0') {
         counter.innerHTML = '';
         return message.value;
@@ -111,8 +111,8 @@ function messageValidate() {
 
 //Shows remaining character count for message textarea
 function charCounter() {
-    const message = document.getElementById('message');
-    const counter = document.getElementById('message-counter');
+    const message = document.querySelector('#message');
+    const counter = document.querySelector('#message-counter');
     counter.style.color = '#000000';
     counter.innerHTML = `${maxMessageLength - message.value.length} characters remaining.`;
 }

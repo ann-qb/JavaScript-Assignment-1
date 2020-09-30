@@ -1,9 +1,9 @@
-const menuBtn = document.getElementById('menu-btn');
+const menuBtn = document.querySelector('#menu-btn');
 menuBtn.addEventListener('click', dropDownMenu);
 
 //Responsive menu
 function dropDownMenu() {
-    const navMenu = document.getElementById('nav');
+    const navMenu = document.querySelector('#nav');
     if (navMenu.style.display === 'none') {
         navMenu.style.display = 'block';
     } else {

@@ -11,15 +11,14 @@ function loadMenu(menuData) {
         const listItemAnchor = document.createElement('a');
         if (menuData['not_found'] === true) {
             listItemAnchor.href = '404.html';
-        }
-        else {
+        } else {
             listItemAnchor.href = menuData[i]['path'];
         }
         listItemAnchor.innerHTML = menuData[i]['label'];
         listItem.appendChild(listItemAnchor);
         list.appendChild(listItem);
     }
-    const nav = document.getElementById('nav');
+    const nav = document.querySelector('#nav');
     nav.appendChild(list);
     updatePageHeadingAndTitle(menuData);
 }
@@ -32,9 +31,9 @@ function updatePageHeadingAndTitle(menuData) {
     // const forEachCallback = (element, elementIndex) => {
     //     console.log(elementIndex, element);
     //     if (element['path'] === filePath) {
-    //         const pageHeading = document.getElementById('page-heading');
+    //         const pageHeading = document.querySelector('#page-heading');
     //         pageHeading.innerHTML = element['label'];
-    //         const pageTitle = document.getElementById('page-title');
+    //         const pageTitle = document.querySelector('title');
     //         pageTitle.innerHTML = 'RMedia - ' + element['label'];
     //     }
     // }
@@ -42,9 +41,9 @@ function updatePageHeadingAndTitle(menuData) {
 
     menuData.forEach(element => {
         if (element['path'] === filePath) {
-            const pageHeading = document.getElementById('page-heading');
+            const pageHeading = document.querySelector('#page-heading');
             pageHeading.innerHTML = element['label'];
-            const pageTitle = document.getElementById('page-title');
+            const pageTitle = document.querySelector('title');
             pageTitle.innerHTML = 'RMedia - ' + element['label'];
         }
     });
