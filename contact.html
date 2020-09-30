@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="page-title"></title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header class="header-div">
         <div class="container flex-box">
-            <h1><a href=""><img src="images/logo.jpg" alt="RMedia"></a></h1>
+            <h1>
+                <a href=""><img src="images/logo.jpg" alt="RMedia"></a>
+            </h1>
             <input type="search" name="search" id="search" placeholder="Search...">
         </div>
     </header>
@@ -25,7 +29,7 @@
                     <div id="text-wrap">
                         <h2 id="page-heading"></h2>
                     </div>
-                </div>  
+                </div>
                 <div id="bottom-sec">
                     <div id="contact-form">
                         <div>
@@ -52,7 +56,7 @@
                             </div>
                             <div class="form-div" id="phone-container">
                                 <div id="phone-num">
-                                    <input type="text" name="country-code" disabled value="+91" class="form-field" id="country-code">
+                                    <input type="text" name="country-code" disabled value="+91" class="form-field" id="country-code"><span id="space"></span>
                                     <input type="tel" name="phoneNumber" placeholder="XXXXXXXXXX" class="form-field" id="num" required>
                                 </div>
                                 <p id="num-msg"></p>
@@ -62,7 +66,7 @@
                             <div class="label-div">
                                 <label for="emailId">Email ID<span class="required-field">*</span></label>
                             </div>
-                            <div class="form-div"  id="email-container">
+                            <div class="form-div" id="email-container">
                                 <input type="email" name="emailId" placeholder="Email ID" class="form-field" required id="email">
                                 <p id="email-msg"></p>
                             </div>
@@ -73,14 +77,14 @@
                             </div>
                             <div class="form-div" id="message-container">
                                 <textarea name="message" id="message" placeholder="Message" class="form-field" cols="15" rows="5" required maxlength="255" onkeyup="charCounter()"></textarea>
-                                
+
                                 <p id="message-counter">255 characters remaining.</p>
                             </div>
                         </div>
                         <div>
-                            <button id="form-submit" onclick="validateSend()">Send Message</button> 
+                            <button id="form-submit" onclick="validateSend()">Send Message</button>
                         </div>
-                    </div>    
+                    </div>
                 </div>
             </div>
             <div id="posts-sec">
@@ -100,9 +104,11 @@
             </ul>
         </div>
     </footer>
+    <script src="js/utility.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/blogposts.js"></script>
     <script src="js/contact.js"></script>
     <script src="js/common.js"></script>
 </body>
+
 </html>

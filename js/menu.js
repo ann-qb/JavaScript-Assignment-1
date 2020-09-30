@@ -1,33 +1,51 @@
-let menuData = new XMLHttpRequest();
-menuData.open("GET", "./api/menu.json");
-menuData.send();
-menuData.addEventListener("load", menu);
+//import {get} from "./utility.js";
 
-//Load menu, page title, and page heading dynamically from menu.json
-function menu(){
-    menuOptions = JSON.parse(menuData.response);
+get("./api/menu.json", loadMenu);
+
+//Load menu tabs dynamically from menu.json
+function loadMenu(menuData) {
     const list = document.createElement('ul');
-    const filePath = window.location.pathname.slice(1);
-    console.log(filePath);
-    for(let i=0;i<menuOptions.length;i++){
+    const numOfMenuTabs = menuData.length;
+    for (let i = 0; i < numOfMenuTabs; i++) {
         const listItem = document.createElement('li');
         const listItemAnchor = document.createElement('a');
-        if(menuOptions['not_found']===true){
+        if (menuData['not_found'] === true) {
             listItemAnchor.href = '404.html';
         }
-        else{
-            listItemAnchor.href = menuOptions[i]['path'];
+        else {
+            listItemAnchor.href = menuData[i]['path'];
         }
-        listItemAnchor.innerHTML = menuOptions[i]['label']; 
+        listItemAnchor.innerHTML = menuData[i]['label'];
         listItem.appendChild(listItemAnchor);
         list.appendChild(listItem);
-        if(menuOptions[i]['path']===filePath){
-            const pageHeading = document.getElementById('page-heading');
-            pageHeading.innerHTML = menuOptions[i]['label'];
-            const pageTitle = document.getElementById('page-title');
-            pageTitle.innerHTML = 'RMedia - '+menuOptions[i]['label'];
-        }
     }
     const nav = document.getElementById('nav');
     nav.appendChild(list);
+    updatePageHeadingAndTitle(menuData);
+}
+
+//Loads page title and page heading dynamically from mmenu.json
+function updatePageHeadingAndTitle(menuData) {
+    const filePath = window.location.pathname.slice(1);
+
+    //For reference:
+    // const forEachCallback = (element, elementIndex) => {
+    //     console.log(elementIndex, element);
+    //     if (element['path'] === filePath) {
+    //         const pageHeading = document.getElementById('page-heading');
+    //         pageHeading.innerHTML = element['label'];
+    //         const pageTitle = document.getElementById('page-title');
+    //         pageTitle.innerHTML = 'RMedia - ' + element['label'];
+    //     }
+    // }
+    // menuData.forEach(forEachCallback);
+
+    menuData.forEach(element => {
+        if (element['path'] === filePath) {
+            const pageHeading = document.getElementById('page-heading');
+            pageHeading.innerHTML = element['label'];
+            const pageTitle = document.getElementById('page-title');
+            pageTitle.innerHTML = 'RMedia - ' + element['label'];
+        }
+    });
 }

@@ -23,6 +23,7 @@ h3 {
     padding: 10px 10px;
 }
 
+
 /*****************************
         2. HEADER
 *****************************/
@@ -59,6 +60,7 @@ header h1 {
     box-shadow: 2px 3px 2px 0 rgba(0, 0, 0, 0.4);
 }
 
+
 /*****************************
         3. BODY
 *****************************/
@@ -85,10 +87,9 @@ body {
 #main-content .flexbox {
     flex-flow: row nowrap;
     justify-content: stretch;
-
 }
 
-#menu-sec, 
+#menu-sec,
 #posts-sec {
     width: 18%;
     background-color: #f1f1f1;
@@ -133,7 +134,7 @@ a {
 
 #top-sec {
     width: 100%;
-    padding: 20px 20px 0;      
+    padding: 20px 20px 0;
 }
 
 #text-wrap {
@@ -175,6 +176,7 @@ a {
     padding: 20px;
 }
 
+
 /*****************************
         4. TABLE
 *****************************/
@@ -209,6 +211,7 @@ table input {
     padding: 2px 4px;
 }
 
+
 /*****************************
         4. FOOTER
 *****************************/
@@ -218,7 +221,7 @@ footer {
     background-color: #c7c7c7;
 }
 
-footer > ul .flex-box {
+footer>ul .flex-box {
     flex-flow: row nowrap;
 }
 
@@ -232,6 +235,7 @@ footer ul li {
     padding: 20px;
 }
 
+
 /*****************************
         4. CONTACT FORM
 *****************************/
@@ -240,7 +244,7 @@ footer ul li {
     display: flex;
     flex-flow: row wrap;
     align-items: baseline;
-    background-color: #f1f1f1;
+    /* background-color: #f1f1f1; */
     width: 100%;
     padding: 20px;
 }
@@ -249,6 +253,7 @@ footer ul li {
     font-size: small;
     color: #ff0000;
     text-align: left;
+    padding-left: 10px;
 }
 
 p#subject-msg,
@@ -257,10 +262,10 @@ p#message-counter {
 }
 
 .required-field {
-    color: #ff0000;
+    color: #000000;
 }
 
-#contact-form > div {
+#contact-form>div {
     width: 100%;
     display: flex;
     flex-flow: row nowrap;
@@ -291,6 +296,10 @@ div#phone-num {
     min-width: 35px;
 }
 
+#space {
+    width: 5px;
+}
+
 #num {
     width: 92%;
 }
@@ -299,18 +308,18 @@ div#phone-num {
     display: inline-block;
     width: 100%;
     margin: 10px 0;
-    padding: 10px 20px;
-    border-color: #ffffff;
+    padding: 10px 10px;
+    border: 1px solid #afafaf;
+    border-radius: 5px;
     outline: none;
 }
 
 .form-field:hover {
-    border: 2px solid #afafaf!important;
-    /* box-shadow: 10px #4e4e4e; */
+    border: 1px solid #000000;
 }
 
 .form-field:focus {
-    border: 1px solid #1d04fc!important;
+    border: 1px solid #1d04fc;
 }
 
 #form-submit {
@@ -328,6 +337,7 @@ div#phone-num {
     background-color: #66c5e4;
 }
 
+
 /*****************************
         5. MEDIA QUERIES
 *****************************/
@@ -337,41 +347,32 @@ div#phone-num {
         display: flex;
         flex-flow: column wrap;
     }
-
     #menu-btn {
         display: block;
     }
-
     #menu-sec {
         text-align: center;
         width: 100%;
     }
-
     #nav {
         display: none;
     }
-
     #posts-sec {
         width: 100%;
     }
-    
     #content-sec {
         width: 100%;
     }
-
     footer ul {
         flex-flow: column wrap;
     }
-    
-    footer  ul  li {
+    footer ul li {
         width: 100%;
         text-align: center;
     }
-
     .label-div {
         width: 30%;
     }
-    
     .form-div {
         width: 70%;
     }
@@ -382,56 +383,44 @@ div#phone-num {
         display: flex;
         flex-flow: column wrap;
     }
-
     header .flex-box {
         flex-flow: column wrap;
         align-items: center;
     }
-    
     header h1 {
         height: 60px;
         width: auto;
     }
-
     #search {
         height: 30px;
     }
-
     #menu-btn {
         display: block;
     }
-
     #menu-sec {
         text-align: center;
         width: 100%;
     }
-
     #nav {
         display: none;
     }
-
     #posts-sec {
         width: 100%;
     }
-    
     #content-sec {
         width: 100%;
         height: auto;
     }
-
     #top-sec {
         flex-flow: row wrap;
     }
-
     #text-wrap {
         width: 100%;
         order: 1;
     }
-
     #page-heading {
         text-align: center;
     }
-
     #image-wrap {
         width: 100%;
         order: 0;
@@ -439,15 +428,12 @@ div#phone-num {
         margin-bottom: 20px;
         padding: 0 10px;
     }
-
-    #contact-form > div {
+    #contact-form>div {
         flex-flow: column wrap;
     }
-
     .label-div {
         width: 100%;
     }
-    
     .form-div {
         width: 100%;
     }
