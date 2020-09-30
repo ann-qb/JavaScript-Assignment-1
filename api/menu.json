@@ -1,7 +1,6 @@
-[
-    {
+[{
         "label": "Home",
-        "path": "index.html",
+        "path": "home.html",
         "not_found": false
     },
     {
