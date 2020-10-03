@@ -15,11 +15,20 @@ function loadHomeData(homeData) {
     const content = document.querySelector('#page-content');
     content.innerHTML = homeData['text-content'];
 
+    loadUserName();
     loadColumnHeaders(homeData['table-headings']);
     displayToggleReadMoreButton(content);
 }
 
-
+//Loads user name and displays 'Hi user name'
+function loadUserName() {
+    const currentUser = getLocalStorage('currentUser');
+    if(currentUser) {
+        const userName = currentUser['firstName'] + ' ' + currentUser['lastName'];
+        const displayUserName = document.querySelector('#user-name');
+        displayUserName.innerHTML = 'Hi ' + userName;
+    }
+}
 
 //Loads column headers for table
 function loadColumnHeaders(tableHeadings) {
@@ -58,4 +67,19 @@ function readMore() {
         toggleReadMoreButton.innerHTML = 'Read More';
         textContent.style.maxHeight = maxHeight;
     }
+}
+
+function confirmLogOut() {
+    const logOutPopUp = document.querySelector('.modal');
+    logOutPopUp.style.display = 'block';
+}
+
+function cancelLogOut() {
+    const logOutPopUp = document.querySelector('.modal');
+    logOutPopUp.style.display = 'none';
+}
+
+function logOut() {
+    removeItemLocalStorage('currentUser');
+    window.location.href = 'login.html';
 }

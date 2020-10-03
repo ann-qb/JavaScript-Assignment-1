@@ -23,7 +23,6 @@ h3 {
     padding: 10px 10px;
 }
 
-
 /*****************************
         2. HEADER
 *****************************/
@@ -60,6 +59,10 @@ header h1 {
     box-shadow: 2px 3px 2px 0 rgba(0, 0, 0, 0.4);
 }
 
+#account-sec {
+    margin: 27px 0;
+    padding: 0 5px;
+}
 
 /*****************************
         3. BODY
@@ -89,8 +92,7 @@ body {
     justify-content: stretch;
 }
 
-#menu-sec,
-#posts-sec {
+#menu-sec, #posts-sec {
     width: 18%;
     background-color: #f1f1f1;
     overflow-y: auto;
@@ -176,7 +178,6 @@ a {
     padding: 20px;
 }
 
-
 /*****************************
         4. TABLE
 *****************************/
@@ -211,9 +212,8 @@ table input {
     padding: 2px 4px;
 }
 
-
 /*****************************
-        4. FOOTER
+        5. FOOTER
 *****************************/
 
 footer {
@@ -235,9 +235,8 @@ footer ul li {
     padding: 20px;
 }
 
-
 /*****************************
-        4. CONTACT FORM
+        6. CONTACT FORM
 *****************************/
 
 #contact-form {
@@ -256,8 +255,7 @@ footer ul li {
     padding-left: 10px;
 }
 
-p#subject-msg,
-p#message-counter {
+p#subject-msg, p#message-counter {
     color: #000000;
 }
 
@@ -332,14 +330,79 @@ div#phone-num {
     margin: auto;
 }
 
-#toggle-content:hover,
-#form-submit:hover {
+#toggle-content:hover, #form-submit:hover {
     background-color: #66c5e4;
 }
 
+/*****************************
+        7. LOG OUT
+*****************************/
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    width: 30%;
+    overflow: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    border-radius: 10px;
+    max-height: 500px;
+}
+
+.card-header {
+    background-color: #66c5e4;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-header h2 {
+    margin: 20px 0;
+    padding: 0 10px;
+    color: #ffffff;
+    font-size: x-large;
+    text-align: center;
+}
+
+#popup-card {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    margin: 20px 10px 25px;
+}
+
+#popup-card button {
+    width: 30%;
+    height: 30px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #ffffff;
+    background-color: #95E1F9;
+}
+
+#popup-card>button>a {
+    display: inline-block;
+    width: 100%;
+}
+
+#popup-card button:hover {
+    background-color: #66c5e4;
+}
 
 /*****************************
-        5. MEDIA QUERIES
+        8. MEDIA QUERIES
 *****************************/
 
 @media (max-width:768px) {
@@ -376,12 +439,19 @@ div#phone-num {
     .form-div {
         width: 70%;
     }
+    .modal-content {
+        width: 55%;
+    }
 }
 
 @media (max-width:480px) {
     .container {
         display: flex;
         flex-flow: column wrap;
+    }
+    header {
+        height: 140px;
+        border-bottom: 50px solid #66c5e4;
     }
     header .flex-box {
         flex-flow: column wrap;
@@ -392,7 +462,26 @@ div#phone-num {
         width: auto;
     }
     #search {
-        height: 30px;
+        height: 35px;
+        margin-top: 16px;
+    }
+    #search-account {
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    #account-sec {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: baseline;
+        margin: 18px 0;
+    }
+    #user-name {
+        margin-right: 10px;
+        display: flex;
+        flex-flow: column wrap;
     }
     #menu-btn {
         display: block;
@@ -436,5 +525,8 @@ div#phone-num {
     }
     .form-div {
         width: 100%;
+    }
+    .modal-content {
+        width: 70%;
     }
 }

@@ -83,6 +83,12 @@ h1 {
     border: 1px solid #000000;
 }
 
+.error-msg {
+    color: #ff0000;
+    font-size: 13px;
+    padding: 4px 8px;
+}
+
 #login-btn {
     align-self: center;
     margin-top: 10px;
@@ -94,15 +100,15 @@ h1 {
     background-color: #66c5e4;
 }
 
-#error-msg{
+#fail-msg {
     margin-bottom: 8px;
     color: #ff0000;
     padding: 0 20px;
 }
+
 #register-link {
     text-align: center;
     font-size: 13px;
-
 }
 
 /*****************************

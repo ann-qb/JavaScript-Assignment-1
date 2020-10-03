@@ -47,6 +47,10 @@ let getLocalStorage = (key) => {
     }
 }
 
+let removeItemLocalStorage = (key) => {
+    localStorage.removeItem(key);
+}
+
 //Updates error message based on messageContent value
 //and returns obj value if there is no error otherwise returns false
 let updateErrorMessage = (obj, errorMessage, errorMessageContent) => {

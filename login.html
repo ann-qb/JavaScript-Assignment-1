@@ -14,29 +14,29 @@
             <div id="card-header">
                 <h1>RMedia</h1>
             </div>
-            <form action="" id="login-form">
-                <p id="error-msg">Error</p>
+            <div id="login-form">
+                <p id="fail-msg"></p>
                 <div class="form-div">
                     <label for="firstName" class="label">User Name</label>
-                    <input type="text" autofocus required class="form-input">
+                    <input type="text" autofocus required class="form-input" id="user-name">
+                    <p class="error-msg" id="name-msg"></p>
                 </div>
                 <div class="form-div">
                     <label for="password" class="label">Password</label>
-                    <input type="password" required class="form-input">
-                    <p id="password"></p>
+                    <input type="password" required class="form-input" id="password">
+                    <p class="error-msg" id="password-msg"></p>
                 </div>
                 <div class="form-div">
-                    <input type="submit" value="Login" class="form-input" id="login-btn">
+                    <input type="submit" value="Login" class="form-input" id="login-btn" onclick="login()">
                 </div>
                 <div>
                     <p id="register-link">Not registered? <a href="register.html">Create an account</a></p>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 
     <script src="js/utility.js"></script>
-    <script src="js/menu.js"></script>
     <script src="js/login.js"></script>
 </body>
 
