@@ -69,16 +69,19 @@ function readMore() {
     }
 }
 
+//Displays pop up asking user to confirm log out action 
 function confirmLogOut() {
     const logOutPopUp = document.querySelector('.modal');
     logOutPopUp.style.display = 'block';
 }
 
+//Function to cancel log out action
 function cancelLogOut() {
     const logOutPopUp = document.querySelector('.modal');
     logOutPopUp.style.display = 'none';
 }
 
+//Function logs out user
 function logOut() {
     removeItemLocalStorage('currentUser');
     window.location.href = 'login.html';
