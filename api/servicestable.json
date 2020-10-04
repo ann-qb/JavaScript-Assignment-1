@@ -1,0 +1,44 @@
+{
+    "columnConfig": [
+        {
+            "title": "Services Offered",
+            "sortable": true,
+            "type": "string",
+            "id": "service"
+        },
+        {
+            "title": "Location",
+            "sortable": true,
+            "type": "string",
+            "id": "location"
+        },
+        {
+            "title": "Contact",
+            "sortable": false,
+            "type": "number",
+            "id": "contact"
+        }
+    ],
+    "data": [
+        {
+           "service": "Service A",
+           "location": "Bangalore",
+           "contact": "9823237876"
+        },
+        {
+            "service": "Service B",
+            "location": "Kochi",
+            "contact": "9823090988"
+         },
+         {
+            "service": "Service D",
+            "location": "Trivandrum",
+            "contact": "9898671176"
+         },
+         {
+            "service": "Service C",
+            "location": "Calicut",
+            "contact": "9821117876"
+         }           
+    ]
+}

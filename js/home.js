@@ -16,7 +16,7 @@ function loadHomeData(homeData) {
     content.innerHTML = homeData['text-content'];
 
     loadUserName();
-    loadColumnHeaders(homeData['table-headings']);
+    // loadColumnHeaders(homeData['table-headings']);
     displayToggleReadMoreButton(content);
 }
 
@@ -31,15 +31,15 @@ function loadUserName() {
 }
 
 //Loads column headers for table
-function loadColumnHeaders(tableHeadings) {
-    const headingRow = document.querySelector('#table-heading');
-    const numOfColumnHeaders = tableHeadings.length;
-    for (let i = 0; i < numOfColumnHeaders; i++) {
-        const columnHeader = document.createElement('th');
-        columnHeader.innerText = tableHeadings[i];
-        headingRow.appendChild(columnHeader);
-    }
-}
+// function loadColumnHeaders(tableHeadings) {
+//     const headingRow = document.querySelector('#table-heading');
+//     const numOfColumnHeaders = tableHeadings.length;
+//     for (let i = 0; i < numOfColumnHeaders; i++) {
+//         const columnHeader = document.createElement('th');
+//         columnHeader.innerText = tableHeadings[i];
+//         headingRow.appendChild(columnHeader);
+//     }
+// }
 
 //Displays read more button if there is text content overflow
 function displayToggleReadMoreButton(content) {

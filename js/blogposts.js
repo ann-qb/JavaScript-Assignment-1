@@ -1,8 +1,18 @@
 //import {get} from "./utility.js";
 
-get("./api/blogposts.json", loadBlogPosts);
+const currentPageIdentifier = window.location.pathname.slice(1);
+switch (currentPageIdentifier) {
+    case 'home.html': get("./api/homeblogposts.json", loadBlogPosts);
+        break;
+    case 'about.html': get("./api/aboutblogposts.json", loadBlogPosts);
+        break;
+    case 'services.html': get("./api/servicesblogposts.json", loadBlogPosts);
+        break;
+    case 'contact.html': get("./api/contactblogposts.json", loadBlogPosts);
+        break;
+}
 
-//Load blog posts dynamically from blogposts.json
+//Loads blog posts dynamically for each page from its blogposts.json file
 function loadBlogPosts(blogPostsData) {
     const numberOfBlogPosts = blogPostsData.length;
     const posts = document.querySelector('#posts');

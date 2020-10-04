@@ -194,6 +194,18 @@ table thead tr {
 
 table thead tr th {
     padding: 10px;
+    text-align: center;
+}
+
+.fa-sort,
+.fa-sort-up,
+.fa-sort-down {
+    text-align: right;
+    opacity: 40%;
+}
+
+th[data-sortable='true'] {
+    cursor: pointer;
 }
 
 table tbody tr {
@@ -210,6 +222,10 @@ table tbody tr td:last-child {
 
 table input {
     padding: 2px 4px;
+}
+
+.jobId {
+    text-align: right;
 }
 
 /*****************************
