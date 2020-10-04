@@ -52,3 +52,31 @@ function updatePageHeadingAndTitle(menuData) {
         }
     });
 }
+
+const menuBtn = document.querySelector('#menu-btn');
+menuBtn.addEventListener('click', toggleDropDownMenu);
+
+//Function to toggle display of responsive dropdown menu
+function toggleDropDownMenu() {
+    const navMenu = document.querySelector('#nav');
+    if (navMenu.style.display === 'none') {
+        navMenu.style.display = 'block';
+    } else {
+        navMenu.style.display = 'none';
+    }
+}
+
+const searchBar = document.querySelector('#search');
+searchBar.addEventListener('keyup', highlightSearch);
+
+function highlightSearch(){
+    const searchValue = searchBar.value;
+    const pageContent = document.querySelector('#page-content').children;
+    for(let eachChild of pageContent){
+        let content = eachChild.textContent;
+        if(content.indexOf(searchValue)!=-1){
+            eachChild.innerHTML = content.replaceAll(searchValue, `<span id="highlight-search">${searchValue}</span>`);
+        }
+        else eachChild.innerHTML = content;
+    }
+}

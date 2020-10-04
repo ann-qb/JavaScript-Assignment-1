@@ -59,6 +59,10 @@ header h1 {
     box-shadow: 2px 3px 2px 0 rgba(0, 0, 0, 0.4);
 }
 
+#highlight-search {
+    background-color: #ffff00;
+}
+
 #account-sec {
     margin: 27px 0;
     padding: 0 5px;
