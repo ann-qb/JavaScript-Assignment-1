@@ -6,19 +6,20 @@ get("./api/menu.json", loadMenu);
 //Load menu tabs dynamically from menu.json
 function loadMenu(menuData) {
     const list = document.createElement('ul');
-    const numOfMenuTabs = menuData.length;
-    for (let i = 0; i < numOfMenuTabs; i++) {
+
+    for (let eachMenuData of menuData){
         const listItem = document.createElement('li');
         const listItemAnchor = document.createElement('a');
-        if (menuData['not_found'] === true) {
+        if (eachMenuData['not_found'] === true) {
             listItemAnchor.href = '404.html';
         } else {
-            listItemAnchor.href = menuData[i]['path'];
+            listItemAnchor.href = eachMenuData['path'];
         }
-        listItemAnchor.innerHTML = menuData[i]['label'];
+        listItemAnchor.innerHTML = eachMenuData['label'];
         listItem.appendChild(listItemAnchor);
         list.appendChild(listItem);
     }
+    
     const nav = document.querySelector('#nav');
     if (nav) {
         nav.appendChild(list);

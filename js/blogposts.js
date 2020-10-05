@@ -15,15 +15,14 @@ switch (currentPageIdentifier) {
 
 //Loads blog posts dynamically for each page from its corresponding blogposts.json file
 function loadBlogPosts(blogPostsData) {
-    const numberOfBlogPosts = blogPostsData.length;
     const posts = document.querySelector('#posts');
-    for (let i = 0; i < numberOfBlogPosts; i++) {
+    for(let eachBlogPost of blogPostsData){
         const listItem = document.createElement('li');
         const listItemAnchor = document.createElement('a');
-        listItemAnchor.href = blogPostsData[i]['href'];
+        listItemAnchor.href = eachBlogPost['href'];
         const listItemAnchorImage = document.createElement('img');
-        listItemAnchorImage.src = blogPostsData[i]['img-path'];
-        listItemAnchorImage.alt = blogPostsData[i]['alt'];
+        listItemAnchorImage.src = eachBlogPost['img-path'];
+        listItemAnchorImage.alt = eachBlogPost['alt'];
         listItemAnchor.appendChild(listItemAnchorImage);
         listItem.appendChild(listItemAnchor);
         posts.appendChild(listItem);

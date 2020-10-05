@@ -40,23 +40,20 @@ function loadTable(tableData) {
 
 //Loads column headers for table
 function loadColumnHeaders(columnConfig) {
-
     const headingRow = document.querySelector('#table-heading');
-
-    const numOfColumnHeaders = columnConfig.length;
-    for (let i = 0; i < numOfColumnHeaders; i++) {
+    for (let eachColumnHeader of columnConfig) {
         const columnHeader = document.createElement('th');
 
         //Set sortable and type attributes
-        columnHeader.setAttribute('data-sortable', columnConfig[i].sortable);
-        columnHeader.setAttribute('data-type', columnConfig[i].type);
+        columnHeader.setAttribute('data-sortable', eachColumnHeader.sortable);
+        columnHeader.setAttribute('data-type', eachColumnHeader.type);
 
         //Add icons to indicate sortable columns using template string
-        if (columnConfig[i].sortable === true && columnConfig[i].type != 'link' && columnConfig[i].type != 'button')
-            columnHeader.innerHTML = `${columnConfig[i].title}${sort}`;
-        else columnHeader.innerHTML = columnConfig[i].title;
+        if (eachColumnHeader.sortable === true && eachColumnHeader.type != 'link' && eachColumnHeader.type != 'button')
+            columnHeader.innerHTML = `${eachColumnHeader.title}${sort}`;
+        else columnHeader.innerHTML = eachColumnHeader.title;
 
-        columnHeader.setAttribute('id', columnConfig[i].id);
+        columnHeader.setAttribute('id', eachColumnHeader.id);
         headingRow.appendChild(columnHeader);
     }
 }

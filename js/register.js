@@ -21,16 +21,19 @@ function validateRegistration() {
 
 //Adds user information to user list and saves to local storage
 function saveUserDetails(userInfo) {
-    //Check if user list exists
-    let userList = getLocalStorage('userList');
-    if (userList) {
-        const addNewUserAtIndex = userList.length + 1;
-        userList[addNewUserAtIndex] = userInfo;
-    } else {
-        userList = [];
-        userList[0] = userInfo;
+    //Check if user list exists. If not, initialise empty array.
+    let userList = getLocalStorage('userList') || [];
+    userList.push(userInfo);
 
-    }
+    //For reference:
+    // if (userList) {
+    //     const addNewUserAtIndex = userList.length + 1;
+    //     userList[addNewUserAtIndex] = userInfo;
+    // } else {
+    //     userList = [];
+    //     userList[0] = userInfo;
+    // }
+    
     setLocalStorage("userList", userList);
     successfulMessage();
 }

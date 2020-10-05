@@ -27,17 +27,15 @@ function login() {
 //Check if user exists in user list
 function checkUserList(userName, password) {
     const userList = getLocalStorage('userList');
-    if(userList) {
+    if(userList && userList.length) {
         for (let eachValue of userList) {
-            if (eachValue['firstName'] == userName && eachValue['password'] == password) {
+            if (eachValue && eachValue['firstName'] == userName && eachValue['password'] == password) {
                 //User exists. Store user information in 'currentUser' to identify currently logged in user.
                 setLocalStorage('currentUser', eachValue);
                 return true;
             }
         }
-    } else {
-        return false;
-    }
+    } else return false;
 }
 
 //Acceptable name format
