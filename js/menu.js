@@ -1,5 +1,6 @@
 //import {get} from "./utility.js";
 
+//API call to load menu.json
 get("./api/menu.json", loadMenu);
 
 //Load menu tabs dynamically from menu.json
@@ -26,7 +27,7 @@ function loadMenu(menuData) {
     loadUserName();
 }
 
-//Loads page title and page heading dynamically from mmenu.json
+//Loads page title and page heading dynamically from menu.json
 function updatePageHeadingAndTitle(menuData) {
     const filePath = window.location.pathname.slice(1);
 
@@ -54,6 +55,7 @@ function updatePageHeadingAndTitle(menuData) {
     });
 }
 
+//Add event listener to menuBtn and on click, call function to toggle display of responsive dropdown menu
 const menuBtn = document.querySelector('#menu-btn');
 menuBtn.addEventListener('click', toggleDropDownMenu);
 
@@ -67,28 +69,30 @@ function toggleDropDownMenu() {
     }
 }
 
+//Add event listener to search bar. Call highlightSearch function on 'keyup'
 const searchBar = document.querySelector('#search');
 searchBar.addEventListener('keyup', highlightSearch);
 
-function highlightSearch(){
+//Function to highlight text matching the search text in main text content area of the current page
+function highlightSearch() {
     const searchValue = searchBar.value;
     const pageContent = document.querySelector('#page-content').children;
-    for(let eachChild of pageContent){
+    for (let eachChild of pageContent) {
         let content = eachChild.textContent;
-        if(content.indexOf(searchValue)!=-1){
+        if (content.indexOf(searchValue) != -1) {
             eachChild.innerHTML = content.replaceAll(searchValue, `<span id="highlight-search">${searchValue}</span>`);
         }
         else eachChild.innerHTML = content;
     }
 }
 
-//Loads user name and displays 'Hi user name'
+//Loads user name and displays 'Hi, user name'
 function loadUserName() {
     const currentUser = getLocalStorage('currentUser');
-    if(currentUser) {
+    if (currentUser) {
         const userName = currentUser['firstName'] + ' ' + currentUser['lastName'];
         const displayUserName = document.querySelector('#user-name');
-        displayUserName.innerHTML = 'Hi ' + userName;
+        displayUserName.innerHTML = `Hi, ${userName}`;
     }
 }
 
@@ -104,7 +108,7 @@ function cancelLogOut() {
     logOutPopUp.style.display = 'none';
 }
 
-//Function logs out user
+//Function to log out user
 function logOut() {
     removeItemLocalStorage('currentUser');
     window.location.href = 'login.html';

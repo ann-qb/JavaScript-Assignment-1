@@ -213,9 +213,7 @@ table thead tr th {
     text-align: center;
 }
 
-.fa-sort,
-.fa-sort-up,
-.fa-sort-down {
+.fa-sort, .fa-sort-up, .fa-sort-down {
     text-align: right;
     opacity: 40%;
 }
@@ -275,7 +273,6 @@ footer ul li {
     display: flex;
     flex-flow: row wrap;
     align-items: baseline;
-    /* background-color: #f1f1f1; */
     width: 100%;
     padding: 20px;
 }

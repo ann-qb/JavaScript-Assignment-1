@@ -1,5 +1,6 @@
 //import {get} from "./utility.js";
 
+//To identify current page and make appropriate API call
 const currentPageIdentifier = window.location.pathname.slice(1);
 switch (currentPageIdentifier) {
     case 'home.html': get("./api/homeblogposts.json", loadBlogPosts);
@@ -12,7 +13,7 @@ switch (currentPageIdentifier) {
         break;
 }
 
-//Loads blog posts dynamically for each page from its blogposts.json file
+//Loads blog posts dynamically for each page from its corresponding blogposts.json file
 function loadBlogPosts(blogPostsData) {
     const numberOfBlogPosts = blogPostsData.length;
     const posts = document.querySelector('#posts');

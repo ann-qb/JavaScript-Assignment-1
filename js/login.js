@@ -1,4 +1,5 @@
 //Check if a user is already logged in
+//If yes, redirect to home.html
 if (getLocalStorage('currentUser')) {
     window.location.href = 'home.html';
 }
@@ -8,11 +9,15 @@ function login() {
     const userName = validateUserName();
     const password = validatePassword();
 
+    //If valid username and password were entered
     if (userName && password) {
-        let loginStatus = checkUserList(userName, password);
-        if (loginStatus) {
+        //Invokes function to check if user exists in localStorage. If yes, returns true, else returns false. 
+        let userExists = checkUserList(userName, password);
+        if (userExists) {
+            //User exists, redirect to home.html
             window.location.href = 'home.html';
         } else {
+            //User does not exist, show error message
             const loginFailMessage = document.querySelector('#fail-msg');
             loginFailMessage.innerHTML = 'User name or password is incorrect';
         }
@@ -25,6 +30,7 @@ function checkUserList(userName, password) {
     if(userList) {
         for (let eachValue of userList) {
             if (eachValue['firstName'] == userName && eachValue['password'] == password) {
+                //User exists. Store user information in 'currentUser' to identify currently logged in user.
                 setLocalStorage('currentUser', eachValue);
                 return true;
             }

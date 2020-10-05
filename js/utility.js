@@ -34,21 +34,28 @@ let post = function (url, payloadObj, callback) {
 
 //Stores data to localStorage
 let setLocalStorage = (key, value) => {
-    localStorage.setItem(key, JSON.stringify(value));
+    if(localStorage){
+        localStorage.setItem(key, JSON.stringify(value));
+    }
 }
 
 //Retrieves data from localStorage
 let getLocalStorage = (key) => {
-    let value = localStorage.getItem(key);
+    if(localStorage){
+        let value = localStorage.getItem(key);
     if (value) {
         return JSON.parse(value);
     } else {
         return false;
     }
+    }
 }
 
+//Removes item from local storage
 let removeItemLocalStorage = (key) => {
-    localStorage.removeItem(key);
+    if(localStorage){
+        localStorage.removeItem(key);
+    }
 }
 
 //Updates error message based on messageContent value

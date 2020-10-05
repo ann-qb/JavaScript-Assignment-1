@@ -21,6 +21,8 @@
 //     })
 // })
 
+
+//Acceptable input field formats
 const nameFormat = /^[A-Za-z][A-Za-z\s]{7,24}$/;
 const phoneNoFormat = /^[1-9][0-9]{9}$/;
 const mailFormat = /^[a-zA-Z0-9.]+@[a-zA-Z]+(?:\.[a-zA-Z]+)*$/;
@@ -33,8 +35,9 @@ function validateSend() {
     const email = emailValidate();
     const message = messageValidate();
 
-    let reqObj;
+
     if (name && phoneNumber && email && message) {
+        let reqObj;
         reqObj = { name, phoneNumber, email, message };
         reqObj = JSON.stringify(reqObj);
         console.log(reqObj); //Prints form data to console
