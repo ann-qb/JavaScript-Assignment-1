@@ -23,6 +23,7 @@ function loadMenu(menuData) {
         nav.appendChild(list);
     }
     updatePageHeadingAndTitle(menuData);
+    loadUserName();
 }
 
 //Loads page title and page heading dynamically from mmenu.json
@@ -79,4 +80,32 @@ function highlightSearch(){
         }
         else eachChild.innerHTML = content;
     }
+}
+
+//Loads user name and displays 'Hi user name'
+function loadUserName() {
+    const currentUser = getLocalStorage('currentUser');
+    if(currentUser) {
+        const userName = currentUser['firstName'] + ' ' + currentUser['lastName'];
+        const displayUserName = document.querySelector('#user-name');
+        displayUserName.innerHTML = 'Hi ' + userName;
+    }
+}
+
+//Displays pop up asking user to confirm log out action 
+function confirmLogOut() {
+    const logOutPopUp = document.querySelector('.modal');
+    logOutPopUp.style.display = 'block';
+}
+
+//Function to cancel log out action
+function cancelLogOut() {
+    const logOutPopUp = document.querySelector('.modal');
+    logOutPopUp.style.display = 'none';
+}
+
+//Function logs out user
+function logOut() {
+    removeItemLocalStorage('currentUser');
+    window.location.href = 'login.html';
 }

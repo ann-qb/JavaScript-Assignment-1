@@ -68,6 +68,18 @@ header h1 {
     padding: 0 5px;
 }
 
+#logout-btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#logout-icon {
+    padding-bottom: 5px;
+    font-size: large;
+}
+
 /*****************************
         3. BODY
 *****************************/

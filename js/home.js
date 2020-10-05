@@ -1,6 +1,6 @@
 //import {get} from "./utility.js";
 
-const textContentMaxHeight = '210px';
+const textContentMaxHeight = '205px';
 
 // For reference:
 // const homePageData = new XMLHttpRequest();
@@ -15,20 +15,20 @@ function loadHomeData(homeData) {
     const content = document.querySelector('#page-content');
     content.innerHTML = homeData['text-content'];
 
-    loadUserName();
+    // loadUserName();
     // loadColumnHeaders(homeData['table-headings']);
     displayToggleReadMoreButton(content);
 }
 
 //Loads user name and displays 'Hi user name'
-function loadUserName() {
-    const currentUser = getLocalStorage('currentUser');
-    if(currentUser) {
-        const userName = currentUser['firstName'] + ' ' + currentUser['lastName'];
-        const displayUserName = document.querySelector('#user-name');
-        displayUserName.innerHTML = 'Hi ' + userName;
-    }
-}
+// function loadUserName() {
+//     const currentUser = getLocalStorage('currentUser');
+//     if(currentUser) {
+//         const userName = currentUser['firstName'] + ' ' + currentUser['lastName'];
+//         const displayUserName = document.querySelector('#user-name');
+//         displayUserName.innerHTML = 'Hi ' + userName;
+//     }
+// }
 
 //Loads column headers for table
 // function loadColumnHeaders(tableHeadings) {
@@ -69,20 +69,20 @@ function readMore() {
     }
 }
 
-//Displays pop up asking user to confirm log out action 
-function confirmLogOut() {
-    const logOutPopUp = document.querySelector('.modal');
-    logOutPopUp.style.display = 'block';
-}
+// //Displays pop up asking user to confirm log out action 
+// function confirmLogOut() {
+//     const logOutPopUp = document.querySelector('.modal');
+//     logOutPopUp.style.display = 'block';
+// }
 
-//Function to cancel log out action
-function cancelLogOut() {
-    const logOutPopUp = document.querySelector('.modal');
-    logOutPopUp.style.display = 'none';
-}
+// //Function to cancel log out action
+// function cancelLogOut() {
+//     const logOutPopUp = document.querySelector('.modal');
+//     logOutPopUp.style.display = 'none';
+// }
 
-//Function logs out user
-function logOut() {
-    removeItemLocalStorage('currentUser');
-    window.location.href = 'login.html';
-}
+// //Function logs out user
+// function logOut() {
+//     removeItemLocalStorage('currentUser');
+//     window.location.href = 'login.html';
+// }
