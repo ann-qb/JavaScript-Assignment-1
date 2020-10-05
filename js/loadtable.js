@@ -9,11 +9,7 @@ switch (currentPage) {
         break;
 }
 
-/* 
-<i class='fas fa-lock'></i>
-<i class='fas fa-user'></i>
-<i class='fas fa-sign-out-alt'></i> 
-*/
+
 
 const sort = '<i class="fas fa-sort"></i>';
 const sortUp = '<i class="fas fa-sort-up"></i>';

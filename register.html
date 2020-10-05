@@ -20,16 +20,19 @@
             <div id="register-form">
                 <div class="form-div">
                     <label for="firstName" class="label">First Name</label>
+                    <span class=icon-box><i class='fas fa-user'></i></span>
                     <input type="text" autofocus required class="form-input" id="first-name">
                     <p class="error-msg" id="fname-msg"></p>
                 </div>
                 <div class="form-div">
                     <label for="lastName" class="label">Last Name</label>
+                    <span class=icon-box><i class='fas fa-user'></i></span>
                     <input type="text" required class="form-input" id="last-name">
                     <p class="error-msg" id="lname-msg"></p>
                 </div>
                 <div class="form-div">
                     <label for="dateOfBirth" class="label">Date of Birth</label>
+                    <span class="icon-box"><i class='fas fa-calendar-alt'></i></span>
                     <input type="date" required class="form-input" id="dob">
                     <p class="error-msg" id="dob-msg"></p>
                 </div>
@@ -53,15 +56,17 @@
                 </div>
                 <div class="form-div">
                     <label for="password" class="label">Password</label>
+                    <span class=icon-box><i class='fas fa-lock'></i></span>
                     <input type="password" required class="form-input" id="password">
                     <p class="error-msg" id="password-msg"></p>
                 </div>
                 <div class="form-div">
                     <label for="confirm-password" class="label">Confirm Password</label>
+                    <span class=icon-box><i class='fas fa-lock'></i></span>
                     <input type="password" required class="form-input" id="confirm-password">
                     <p class="error-msg" id="confirm-msg"></p>
                 </div>
-                <div class="form-div">
+                <div class="form-div" id="final-field">
                     <div id="tc">
                         <input type="checkbox" id="tc-checkbox">
                         <p id="terms-label">Accept Terms and Conditions</p>
