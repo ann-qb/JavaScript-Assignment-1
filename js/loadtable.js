@@ -71,17 +71,35 @@ function loadRows(data) {
             if (eachColumn.type == 'number') {
                 cell.className = eachColumn.id;
                 cell.innerHTML = eachRow[eachColumn.id];
+                cell.style.textAlign = 'right';
             } else if (eachColumn.type == 'link') {
                 const anchorTag = document.createElement('a');
                 anchorTag.href = eachRow[eachColumn.id];
                 anchorTag.target = '_blank';
                 anchorTag.innerHTML = 'See Post';
+                anchorTag.style.textDecoration = 'underline';
+                anchorTag.onmouseenter = function() {
+                    anchorTag.style.color = '#ffffff';
+                }
+                anchorTag.onmouseleave = function() {
+                    anchorTag.style.color = '#000000';
+                }
                 cell.className = eachColumn.id;
                 cell.appendChild(anchorTag);
             } else if (eachColumn.type === 'button') {
                 if (eachRow[eachColumn.id] === 'open') {
                     const buttonTag = document.createElement('button');
                     buttonTag.innerHTML = 'Apply';
+                    buttonTag.style.padding = '2px 10px';
+                    buttonTag.style.borderWidth = '1px';
+                    buttonTag.style.outline = 'none';
+                    buttonTag.style.backgroundColor = '#eeeeee';
+                    buttonTag.onmouseenter = function() {
+                        buttonTag.style.backgroundColor = '#78DD90';
+                    }
+                    buttonTag.onmouseleave = function() {
+                        buttonTag.style.backgroundColor = '#eeeeee';
+                    }
                     cell.appendChild(buttonTag);
                     buttonTag.onclick = function () {
                         alert("Applied Successfully!");
@@ -93,6 +111,8 @@ function loadRows(data) {
             } else {
                 cell.className = eachColumn.id;
                 cell.innerHTML = eachRow[eachColumn.id];
+                if(eachColumn.type === 'date')
+                    cell.style.textAlign = 'right';
             }
             row.appendChild(cell);
         }

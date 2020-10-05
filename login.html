@@ -20,13 +20,23 @@
                 <p id="fail-msg"></p>
                 <div class="form-div">
                     <label for="firstName" class="label">User Name</label>
-                    <input type="text" autofocus required class="form-input" id="user-name">
-                    <p class="error-msg" id="name-msg"></p>
+                    <div class="input-div">
+                        <div class="input-group">
+                            <span class=icon-box><i class='fas fa-user'></i></span>
+                            <input type="text" autofocus required class="form-input" id="user-name">
+                        </div>
+                        <p class="error-msg" id="name-msg"></p>
+                    </div>
                 </div>
                 <div class="form-div">
                     <label for="password" class="label">Password</label>
-                    <input type="password" required class="form-input" id="password">
-                    <p class="error-msg" id="password-msg"></p>
+                    <div class="input-div">
+                        <div class="input-group">
+                            <span class=icon-box><i class='fas fa-lock'></i></span>
+                            <input type="password" required class="form-input" id="password">
+                        </div>
+                        <p class="error-msg" id="password-msg"></p>
+                    </div>
                 </div>
                 <div class="form-div">
                     <input type="submit" value="Login" class="form-input" id="login-btn" onclick="login()">

@@ -48,8 +48,10 @@ function validateFirstName() {
     const firstName = document.querySelector('#first-name');
     const errorMessage = document.querySelector('#fname-msg');
     let errorMessageContent = '';
-    if (!firstName.value.match(nameFormat)) {
-        errorMessageContent = "First Name is a required field and accepts only character values";
+    if (!firstName.value) {
+        errorMessageContent = "First Name is a required field";
+    } else if (!firstName.value.match(nameFormat)) {
+        errorMessageContent = "First Name accepts only character values";
     }
     return updateErrorMessage(firstName, errorMessage, errorMessageContent);
 }
@@ -59,8 +61,10 @@ function validateLastName() {
     const lastName = document.querySelector('#last-name');
     const errorMessage = document.querySelector('#lname-msg');
     let errorMessageContent = '';
-    if (!lastName.value.match(nameFormat)) {
-        errorMessageContent = "Last Name is a required field and accepts only character values";
+    if (!lastName.value) {
+        errorMessageContent = "Last Name is a required field";
+    } else if (!lastName.value.match(nameFormat)) {
+        errorMessageContent = "Last Name accepts only character values";
     }
     return updateErrorMessage(lastName, errorMessage, errorMessageContent);
 }

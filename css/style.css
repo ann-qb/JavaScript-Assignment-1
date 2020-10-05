@@ -216,6 +216,7 @@ table thead tr th {
 .fa-sort, .fa-sort-up, .fa-sort-down {
     text-align: right;
     opacity: 40%;
+    float: right;
 }
 
 th[data-sortable='true'] {
@@ -236,10 +237,6 @@ table tbody tr td:last-child {
 
 table input {
     padding: 2px 4px;
-}
-
-.jobId {
-    text-align: right;
 }
 
 /*****************************
@@ -418,7 +415,7 @@ div#phone-num {
     border-radius: 4px;
     outline: none;
     border: 1px solid #ffffff;
-    background-color: #95E1F9;
+    /* background-color: #95E1F9; */
 }
 
 #popup-card>button>a {
@@ -426,8 +423,20 @@ div#phone-num {
     width: 100%;
 }
 
-#popup-card button:hover {
+#cancel-logout {
+    background-color: #95E1F9;
+}
+
+#cancel-logout:hover {
     background-color: #66c5e4;
+}
+
+#confirm-logout {
+    background-color: #08b0db;
+}
+
+#confirm-logout:hover {
+    background-color: #20a2c2;
 }
 
 /*****************************

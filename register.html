@@ -20,51 +20,73 @@
             <div id="register-form">
                 <div class="form-div">
                     <label for="firstName" class="label">First Name</label>
-                    <span class=icon-box><i class='fas fa-user'></i></span>
-                    <input type="text" autofocus required class="form-input" id="first-name">
-                    <p class="error-msg" id="fname-msg"></p>
+                    <div class="input-div">
+                        <div class="input-group">
+                            <span class=icon-box><i class='fas fa-user'></i></span>
+                            <input type="text" autofocus required class="form-input" id="first-name">
+                        </div>
+                        <p class="error-msg" id="fname-msg"></p>
+                    </div>
                 </div>
                 <div class="form-div">
                     <label for="lastName" class="label">Last Name</label>
-                    <span class=icon-box><i class='fas fa-user'></i></span>
-                    <input type="text" required class="form-input" id="last-name">
-                    <p class="error-msg" id="lname-msg"></p>
+                    <div class="input-div">
+                        <div class="input-group">
+                            <span class=icon-box><i class='fas fa-user'></i></span>
+                            <input type="text" required class="form-input" id="last-name">
+                        </div>
+                        <p class="error-msg" id="lname-msg"></p>
+                    </div>
                 </div>
                 <div class="form-div">
                     <label for="dateOfBirth" class="label">Date of Birth</label>
-                    <span class="icon-box"><i class='fas fa-calendar-alt'></i></span>
-                    <input type="date" required class="form-input" id="dob">
-                    <p class="error-msg" id="dob-msg"></p>
+                    <div class="input-div">
+                        <div class="input-group">
+                            <span class="icon-box"><i class='fas fa-calendar-alt'></i></span>
+                            <input type="date" required class="form-input" id="dob">
+                        </div>
+                        <p class="error-msg" id="dob-msg"></p>
+                    </div>
                 </div>
                 <div class="form-div">
                     <p class="label">Gender</p>
-                    <div id="gender-labels">
-                        <div class="radio-div">
-                            <input type="radio" id="male" name="gender" value="male">
-                            <label for="male">Male</label>
+                    <div class="input-div">
+                        <div id="gender-labels">
+                            <div class="radio-div">
+                                <input type="radio" id="male" name="gender" value="male">
+                                <label for="male">Male</label>
+                            </div>
+                            <div class="radio-div">
+                                <input type="radio" id="female" name="gender" value="female">
+                                <label for="female">Female</label>
+                            </div>
+                            <div class="radio-div">
+                                <input type="radio" id="other" name="gender" value="other">
+                                <label for="other">Other</label>
+                            </div>
                         </div>
-                        <div class="radio-div">
-                            <input type="radio" id="female" name="gender" value="female">
-                            <label for="female">Female</label>
-                        </div>
-                        <div class="radio-div">
-                            <input type="radio" id="other" name="gender" value="other">
-                            <label for="other">Other</label>
-                        </div>
+                        <p class="error-msg" id="gender-msg"></p>
                     </div>
-                    <p class="error-msg" id="gender-msg"></p>
                 </div>
                 <div class="form-div">
                     <label for="password" class="label">Password</label>
-                    <span class=icon-box><i class='fas fa-lock'></i></span>
-                    <input type="password" required class="form-input" id="password">
-                    <p class="error-msg" id="password-msg"></p>
+                    <div class="input-div">
+                        <div class="input-group">
+                            <span class=icon-box><i class='fas fa-lock'></i></span>
+                            <input type="password" required class="form-input" id="password">
+                        </div>
+                        <p class="error-msg" id="password-msg"></p>
+                    </div>
                 </div>
                 <div class="form-div">
                     <label for="confirm-password" class="label">Confirm Password</label>
-                    <span class=icon-box><i class='fas fa-lock'></i></span>
-                    <input type="password" required class="form-input" id="confirm-password">
-                    <p class="error-msg" id="confirm-msg"></p>
+                    <div class="input-div">
+                        <div class="input-group">
+                            <span class=icon-box><i class='fas fa-lock'></i></span>
+                            <input type="password" required class="form-input" id="confirm-password">
+                        </div>
+                        <p class="error-msg" id="confirm-msg"></p>
+                    </div>
                 </div>
                 <div class="form-div" id="final-field">
                     <div id="tc">
@@ -72,7 +94,8 @@
                         <p id="terms-label">Accept Terms and Conditions</p>
                     </div>
                     <p class="error-msg" id="tc-accept"></p>
-                    <input type="submit" value="Register" class="form-input" id="register-btn" onclick="validateRegistration()">
+                    <input type="submit" value="Register" class="form-input" id="register-btn"
+                        onclick="validateRegistration()">
                     <p id="login-link">Already have an account? <a href="login.html">Login</a></p>
                 </div>
             </div>
