@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="header-div">
         <div class="container flex-box">
             <h1>
                 <a href=""><img src="images/logo.jpg" alt="RMedia"></a>
@@ -17,7 +17,7 @@
             <input type="search" name="search" id="search" placeholder="Search...">
         </div>
     </header>
-    <div id="content">
+    <div class="content">
         <div class="container flex-box" id="main-content">
             <div id="menu-sec">
                 <button id="menu-btn">Menu</button>
@@ -29,8 +29,13 @@
                     <div id="text-wrap">
                         <h2 id="page-heading"></h2>
                         <div id="page-content">
+                            <p>
+                                Lorem lpsum is simply dummy text of the printing and typesetting industry. Lorem lpsum has been the industry's standard dummy text ever since the 1500's,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has
+                                survived not only five centuries, but also the leap into electronic typesetting,remaining 1960s with the release ofLetraset sheets containing lorem lpsum passages,and more recently with desktop publishing software like
+                                Aldus Pagemker including versions of lorem lpsum.
+                            </p>
+                            <p>why do use it?</p>
                         </div>
-                        <button onclick="readMore()" id="toggle-content"></button>
                     </div>
                     <div id="image-wrap">
                         <img src="images/main-image.jpg" alt="RMedia Image">
@@ -39,7 +44,11 @@
                 <div id="bottom-sec">
                     <table>
                         <thead>
-                            <tr id="table-heading">
+                            <tr>
+                                <th>Lorem</th>
+                                <th>Lorem</th>
+                                <th>Lorem</th>
+                                <th>Lorem</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -80,7 +89,6 @@
                                 <td><input type="button" value="Apply Now"></td>
                             </tr>
                         </tbody>
-
                     </table>
                 </div>
             </div>
@@ -104,7 +112,6 @@
     <script src="js/utility.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/blogposts.js"></script>
-    <script src="js/home.js"></script>
     <script src="js/common.js"></script>
 </body>
 
