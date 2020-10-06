@@ -1,11 +1,11 @@
 //Identifies current page and loads table json file accordingly
 const currentPage = window.location.pathname.slice(1);
 switch (currentPage) {
-    case 'home.html': get('./api/hometable.json', loadTable);
+    case 'home.html': get('./api/homeTable.json', loadTable);
         break;
-    case 'about.html': get('./api/abouttable.json', loadTable);
+    case 'about.html': get('./api/aboutTable.json', loadTable);
         break;
-    case 'services.html': get('./api/servicestable.json', loadTable);
+    case 'services.html': get('./api/servicesTable.json', loadTable);
         break;
 }
 

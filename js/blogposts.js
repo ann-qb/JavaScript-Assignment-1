@@ -3,13 +3,13 @@
 //To identify current page and make appropriate API call
 const currentPageIdentifier = window.location.pathname.slice(1);
 switch (currentPageIdentifier) {
-    case 'home.html': get("./api/homeblogposts.json", loadBlogPosts);
+    case 'home.html': get("./api/homeBlogPosts.json", loadBlogPosts);
         break;
-    case 'about.html': get("./api/aboutblogposts.json", loadBlogPosts);
+    case 'about.html': get("./api/aboutBlogPosts.json", loadBlogPosts);
         break;
-    case 'services.html': get("./api/servicesblogposts.json", loadBlogPosts);
+    case 'services.html': get("./api/servicesBlogPosts.json", loadBlogPosts);
         break;
-    case 'contact.html': get("./api/contactblogposts.json", loadBlogPosts);
+    case 'contact.html': get("./api/contactBlogPosts.json", loadBlogPosts);
         break;
 }
 
