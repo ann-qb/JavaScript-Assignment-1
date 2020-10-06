@@ -1,12 +1,3 @@
-//import {get} from "./utility.js";
-
-// For reference:
-// const homePageData = new XMLHttpRequest();
-// homePageData.open("GET", "./api/home.json");
-// homePageData.send();
-// homePageData.addEventListener("load", loadHomeData);
-
-
 const textContentMaxHeight = '205px';
 get("./api/home.json", loadHomeData);
 

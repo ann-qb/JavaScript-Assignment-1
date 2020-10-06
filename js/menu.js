@@ -1,5 +1,3 @@
-//import {get} from "./utility.js";
-
 //API call to load menu.json
 get("./api/menu.json", loadMenu);
 
@@ -31,19 +29,6 @@ function loadMenu(menuData) {
 //Loads page title and page heading dynamically from menu.json
 function updatePageHeadingAndTitle(menuData) {
     const filePath = window.location.pathname.slice(1);
-
-    //For reference:
-    // const forEachCallback = (element, elementIndex) => {
-    //     console.log(elementIndex, element);
-    //     if (element['path'] === filePath) {
-    //         const pageHeading = document.querySelector('#page-heading');
-    //         pageHeading.innerHTML = element['label'];
-    //         const pageTitle = document.querySelector('title');
-    //         pageTitle.innerHTML = 'RMedia - ' + element['label'];
-    //     }
-    // }
-    // menuData.forEach(forEachCallback);
-
     menuData.forEach(element => {
         if (element['path'] === filePath) {
             const pageHeading = document.querySelector('#page-heading');

@@ -227,12 +227,3 @@ function createNewSortedRows(sortedColumnValues, columnID) {
     //Invokes function to load new sorted rows
     loadRows(newSortedRows);
 }
-
-//For reference: Why did they not work?
-// tableHeading.addEventListener('click', function() {
-//     identifyClickTarget(event);
-// });
-
-// function identifyClickTarget(event){
-//     console.log(event.target);
-// }

@@ -1,5 +1,3 @@
-//import {get} from "./utility.js";
-
 //To identify current page and make appropriate API call
 const currentPageIdentifier = window.location.pathname.slice(1);
 switch (currentPageIdentifier) {

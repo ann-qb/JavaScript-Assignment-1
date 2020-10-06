@@ -23,17 +23,7 @@ function validateRegistration() {
 function saveUserDetails(userInfo) {
     //Check if user list exists. If not, initialise empty array.
     let userList = getLocalStorage('userList') || [];
-    userList.push(userInfo);
-
-    //For reference:
-    // if (userList) {
-    //     const addNewUserAtIndex = userList.length + 1;
-    //     userList[addNewUserAtIndex] = userInfo;
-    // } else {
-    //     userList = [];
-    //     userList[0] = userInfo;
-    // }
-    
+    userList.push(userInfo);    
     setLocalStorage("userList", userList);
     successfulMessage();
 }
