@@ -34,26 +34,26 @@ let post = function (url, payloadObj, callback) {
 
 //Stores data to localStorage
 let setLocalStorage = (key, value) => {
-    if(localStorage){
+    if (localStorage) {
         localStorage.setItem(key, JSON.stringify(value));
     }
 }
 
 //Retrieves data from localStorage
 let getLocalStorage = (key) => {
-    if(localStorage){
+    if (localStorage) {
         let value = localStorage.getItem(key);
-    if (value) {
-        return JSON.parse(value);
-    } else {
-        return false;
-    }
+        if (value) {
+            return JSON.parse(value);
+        } else {
+            return false;
+        }
     }
 }
 
 //Removes item from local storage
 let removeItemLocalStorage = (key) => {
-    if(localStorage){
+    if (localStorage) {
         localStorage.removeItem(key);
     }
 }
@@ -75,10 +75,31 @@ let updateErrorMessage = (obj, errorMessage, errorMessageContent) => {
 
 //Returns current page name
 let currentPageIdentifier = () => {
-    return window.location.pathname.slice(1);
+    const currentPage = window.location.pathname.slice(1).replace('.html', '');
+    switch (currentPage) {
+        case 'home': return 'home';
+            break;
+        case 'about': return 'about';
+            break;
+        case 'services': return 'services';
+            break;
+        case 'contact': return 'contact';
+            break;
+    }
 }
 
-//Creates new HTML element
-let createNewElement = (element) => {
-    return document.createElement(element);
+//Utility function to create new anchor element
+let createNewAnchorElement = (href, setTarget = false) => {
+    const anchorTag = document.createElement('a');
+    anchorTag.href = href;
+    if (setTarget) { anchorTag.target = '_blank'; }
+    return anchorTag;
+}
+
+//Utility function to create new img element
+let createNewImgElement = (src, alt) => {
+    const imgTag = document.createElement('img');
+    imgTag.src = src;
+    imgTag.alt = alt;
+    return imgTag;
 }

@@ -1,14 +1,13 @@
-//Identifies current page and loads table json file accordingly
-const currentPageName = currentPageIdentifier();
-switch (currentPageName) {
-    case 'home.html': get('./api/homeTable.json', loadTable);
-        break;
-    case 'about.html': get('./api/aboutTable.json', loadTable);
-        break;
-    case 'services.html': get('./api/servicesTable.json', loadTable);
-        break;
+//Function to identify current page and make appropriate API call
+function makeAPICall() {
+    const currentPage = currentPageIdentifier();
+    if (currentPage !== 'contact') {
+        get('./api/' + currentPage + 'Table.json', loadTable);
+    }
 }
 
+//Invoke function to identify current page and make appropriate API call
+makeAPICall();
 
 // Sortability/Sort type (ascending/descending) indicator icons (present in column headers of sortable columns)
 //Sortable column
@@ -58,7 +57,7 @@ function columnHeaderConfig(columnHeader, eachColumnHeader) {
     columnHeader.setAttribute('data-type', eachColumnHeader.type);
 
     //Add icons to indicate sortable columns using template string
-    if (eachColumnHeader.sortable === true && eachColumnHeader.type != 'link' && eachColumnHeader.type != 'button' && (eachColumnHeader.type === 'number' || eachColumnHeader.type === 'string' || eachColumnHeader.type === 'date')) {
+    if (eachColumnHeader.sortable && eachColumnHeader.type !== 'link' && eachColumnHeader.type !== 'button' && (eachColumnHeader.type === 'number' || eachColumnHeader.type === 'string' || eachColumnHeader.type === 'date')) {
         columnHeader.innerHTML = `${eachColumnHeader.title}${sort}`;
     }
     else {
@@ -92,9 +91,7 @@ function tableCellConfig(cell, eachColumn, eachRow) {
         cell.innerHTML = eachRow[eachColumn.id];
         cell.style.textAlign = 'right';
     } else if (eachColumn.type == 'link') {
-        const anchorTag = document.createElement('a');
-        anchorTag.href = eachRow[eachColumn.id];
-        anchorTag.target = '_blank';
+        const anchorTag = createNewAnchorElement(eachRow[eachColumn.id], true);
         anchorTag.innerHTML = 'See Post';
         anchorTag.style.textDecoration = 'underline';
         anchorTag.onmouseenter = function () {
@@ -110,6 +107,7 @@ function tableCellConfig(cell, eachColumn, eachRow) {
             buttonTag.innerHTML = 'Apply';
             buttonTag.style.padding = '2px 10px';
             buttonTag.style.borderWidth = '1px';
+            buttonTag.style.borderRadius = '2px';
             buttonTag.style.outline = 'none';
             buttonTag.style.backgroundColor = '#eeeeee';
             buttonTag.onmouseenter = function () {
