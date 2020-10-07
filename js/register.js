@@ -70,12 +70,12 @@ function validateDateOfBirth() {
     if (dateOfBirth.value === '') {
         errorMessageContent = "Date of Birth is a required field";
         //return updateErrorMessage(dateOfBirth, errorMessage, errorMessageContent);
-    }
-    const dOB = new Date(dateOfBirth.value);
-    const today = new Date();
-    if (dOB > today) {
-        errorMessageContent = "You cannot enter a date in the future";
-        //return updateErrorMessage(dateOfBirth, errorMessage, errorMessageContent);
+    } else {
+        const dOB = new Date(dateOfBirth.value);
+        const today = new Date();
+        if (dOB > today) {
+            errorMessageContent = "You cannot enter a date in the future";
+        }
     }
     return updateErrorMessage(dateOfBirth, errorMessage, errorMessageContent);
 }

@@ -72,3 +72,13 @@ let updateErrorMessage = (obj, errorMessage, errorMessageContent) => {
         return obj.value;
     }
 }
+
+//Returns current page name
+let currentPageIdentifier = () => {
+    return window.location.pathname.slice(1);
+}
+
+//Creates new HTML element
+let createNewElement = (element) => {
+    return document.createElement(element);
+}

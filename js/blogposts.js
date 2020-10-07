@@ -1,6 +1,6 @@
 //To identify current page and make appropriate API call
-const currentPageIdentifier = window.location.pathname.slice(1);
-switch (currentPageIdentifier) {
+const currentPage = currentPageIdentifier();
+switch (currentPage) {
     case 'home.html': get("./api/homeBlogPosts.json", loadBlogPosts);
         break;
     case 'about.html': get("./api/aboutBlogPosts.json", loadBlogPosts);
@@ -15,10 +15,10 @@ switch (currentPageIdentifier) {
 function loadBlogPosts(blogPostsData) {
     const posts = document.querySelector('#posts');
     for(let eachBlogPost of blogPostsData){
-        const listItem = document.createElement('li');
-        const listItemAnchor = document.createElement('a');
+        const listItem = createNewElement('li');
+        const listItemAnchor = createNewElement('a');
         listItemAnchor.href = eachBlogPost['href'];
-        const listItemAnchorImage = document.createElement('img');
+        const listItemAnchorImage = createNewElement('img');
         listItemAnchorImage.src = eachBlogPost['img-path'];
         listItemAnchorImage.alt = eachBlogPost['alt'];
         listItemAnchor.appendChild(listItemAnchorImage);

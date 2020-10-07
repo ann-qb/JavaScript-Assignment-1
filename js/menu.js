@@ -48,11 +48,7 @@ menuBtn.addEventListener('click', toggleDropDownMenu);
 //Function to toggle display of responsive dropdown menu
 function toggleDropDownMenu() {
     const navMenu = document.querySelector('#nav');
-    if (navMenu.style.display === 'none') {
-        navMenu.style.display = 'block';
-    } else {
-        navMenu.style.display = 'none';
-    }
+    navMenu.style.display === 'none' ? navMenu.style.display = 'block' : navMenu.style.display = 'none';
 }
 
 //Add event listener to search bar. Call highlightSearch function on 'keyup'
@@ -65,10 +61,7 @@ function highlightSearch() {
     const pageContent = document.querySelector('#page-content').children;
     for (let eachChild of pageContent) {
         let content = eachChild.textContent;
-        if (content.indexOf(searchValue) != -1) {
-            eachChild.innerHTML = content.replaceAll(searchValue, `<span id="highlight-search">${searchValue}</span>`);
-        }
-        else eachChild.innerHTML = content;
+        content.indexOf(searchValue) != -1 ? eachChild.innerHTML = content.replaceAll(searchValue, `<span id="highlight-search">${searchValue}</span>`) : eachChild.innerHTML = content;
     }
 }
 

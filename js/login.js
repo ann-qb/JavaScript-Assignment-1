@@ -1,8 +1,16 @@
-//Check if a user is already logged in
+//Function to check if a user is already logged in
 //If yes, redirect to home.html
-if (getLocalStorage('currentUser')) {
-    window.location.href = 'home.html';
+checkLoggedInUser = () => {
+    if (getLocalStorage('currentUser')) {
+        window.location.href = 'home.html';
+    }
 }
+
+//Invoke function to check if a user is already logged in
+checkLoggedInUser();
+
+//Acceptable name format
+const nameFormat = /^[A-Za-z][A-Za-z.]*$/;
 
 //Login function
 function login() {
@@ -37,9 +45,6 @@ function checkUserList(userName, password) {
         }
     } else return false;
 }
-
-//Acceptable name format
-const nameFormat = /^[A-Za-z][A-Za-z.]*$/;
 
 //Validates user name
 function validateUserName() {
