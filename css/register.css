@@ -39,7 +39,7 @@ body {
     border-top-right-radius: 10px;
 }
 
-h1,
+h1, 
 h2 {
     text-align: center;
     padding: 20px 10px;
@@ -169,7 +169,7 @@ h2 {
 }
 
 #register-btn:hover {
-    background-color:#08b0db;
+    background-color: #08b0db;
 }
 
 .modal {
@@ -237,7 +237,7 @@ h2 {
 }
 
 #popup-card button:hover {
-    background-color:#08b0db;
+    background-color: #08b0db;
 }
 
 /*****************************
@@ -270,5 +270,17 @@ h2 {
     }
     #popup-card h2 {
         margin: 5px 0;
+    }
+}
+
+@media (max-width:485px) and (max-height:720px) {
+    #register-container {
+        align-items: flex-start;
+    }
+}
+
+@media (max-height:560px) {
+    #register-container {
+        align-items: flex-start;
     }
 }
