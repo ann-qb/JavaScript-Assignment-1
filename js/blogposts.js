@@ -1,21 +1,18 @@
-//Function to identify current page and make appropriate API call
-function makeAPICall() {
+//Function identifies current page and makes appropriate API call
+function fetchBlogPostsDetails() {
     const currentPage = currentPageIdentifier();
     get('./api/' + currentPage + 'BlogPosts.json', loadBlogPosts);
 }
 
-//Invoke function to identify current page and make appropriate API call
-makeAPICall();
+fetchBlogPostsDetails();
 
 //Loads blog posts dynamically for each page from its corresponding blogposts.json file
 function loadBlogPosts(blogPostsData) {
     const posts = document.querySelector('#posts');
-    for (let eachBlogPost of blogPostsData) {
+    for (let blogPostObj of blogPostsData) {
         const listItem = document.createElement('li');
-        //Invoke utility function to create anchor element
-        const listItemAnchor = createNewAnchorElement(eachBlogPost['href']);
-        //Invoke utility function to create img element
-        const listItemAnchorImage = createNewImgElement(eachBlogPost['img-path'], eachBlogPost['alt']);
+        const listItemAnchor = createNewAnchorElement(blogPostObj['href']);
+        const listItemAnchorImage = createNewImgElement(blogPostObj['img-path'], blogPostObj['alt']);
         listItemAnchor.appendChild(listItemAnchorImage);
         listItem.appendChild(listItemAnchor);
         posts.appendChild(listItem);

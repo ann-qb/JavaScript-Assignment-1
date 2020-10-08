@@ -11,7 +11,6 @@ function validateRegistration() {
     const confirmPassword = matchPassword();
     const acceptTermsAndConditions = checkTermsAndConditions();
 
-    //On successful validation
     if (firstName && lastName && dateOfBirth && gender && password && confirmPassword && acceptTermsAndConditions) {
         //User information stored as object
         let userInfo = { firstName, lastName, dateOfBirth, gender, password };
@@ -69,7 +68,6 @@ function validateDateOfBirth() {
     let errorMessageContent = '';
     if (dateOfBirth.value === '') {
         errorMessageContent = "Date of Birth is a required field";
-        //return updateErrorMessage(dateOfBirth, errorMessage, errorMessageContent);
     } else {
         const dOB = new Date(dateOfBirth.value);
         const today = new Date();

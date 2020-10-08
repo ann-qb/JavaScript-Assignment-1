@@ -1,25 +1,20 @@
+//Invoke function to check if a user is already logged in
+checkLoggedInUser();
+
 //Function to check if a user is already logged in
 //If yes, redirect to home.html
-checkLoggedInUser = () => {
+function checkLoggedInUser() {
     if (getLocalStorage('currentUser')) {
         window.location.href = 'home.html';
     }
 }
-
-//Invoke function to check if a user is already logged in
-checkLoggedInUser();
-
-//Acceptable name format
-const nameFormat = /^[A-Za-z][A-Za-z.]*$/;
 
 //Login function
 function login() {
     const userName = validateUserName();
     const password = validatePassword();
 
-    //If valid username and password were entered
     if (userName && password) {
-        //Invokes function to check if user exists in localStorage. If yes, returns true, else returns false. 
         let userExists = checkUserList(userName, password);
         if (userExists) {
             //User exists, redirect to home.html
@@ -32,19 +27,22 @@ function login() {
     }
 }
 
-//Check if user exists in user list
+//Function to check if user exists in localStorage. If yes, returns true, else returns false. 
 function checkUserList(userName, password) {
     const userList = getLocalStorage('userList');
     if(userList && userList.length) {
-        for (let eachValue of userList) {
-            if (eachValue && eachValue['firstName'] == userName && eachValue['password'] == password) {
+        for (let userListObj of userList) {
+            if (userListObj && userListObj['firstName'] == userName && userListObj['password'] == password) {
                 //User exists. Store user information in 'currentUser' to identify currently logged in user.
-                setLocalStorage('currentUser', eachValue);
+                setLocalStorage('currentUser', userListObj);
                 return true;
             }
         }
     } else return false;
 }
+
+//Acceptable name format
+const nameFormat = /^[A-Za-z][A-Za-z.]*$/;
 
 //Validates user name
 function validateUserName() {

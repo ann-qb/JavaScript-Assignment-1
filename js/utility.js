@@ -43,11 +43,7 @@ let setLocalStorage = (key, value) => {
 let getLocalStorage = (key) => {
     if (localStorage) {
         let value = localStorage.getItem(key);
-        if (value) {
-            return JSON.parse(value);
-        } else {
-            return false;
-        }
+        return value ? JSON.parse(value) : false;
     }
 }
 
@@ -75,17 +71,7 @@ let updateErrorMessage = (obj, errorMessage, errorMessageContent) => {
 
 //Returns current page name
 let currentPageIdentifier = () => {
-    const currentPage = window.location.pathname.slice(1).replace('.html', '');
-    switch (currentPage) {
-        case 'home': return 'home';
-            break;
-        case 'about': return 'about';
-            break;
-        case 'services': return 'services';
-            break;
-        case 'contact': return 'contact';
-            break;
-    }
+    return window.location.pathname.slice(1).replace('.html', '');
 }
 
 //Utility function to create new anchor element

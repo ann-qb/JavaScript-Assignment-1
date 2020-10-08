@@ -5,8 +5,6 @@ get("./api/home.json", loadHomeData);
 function loadHomeData(homeData) {
     const content = document.querySelector('#page-content');
     content.innerHTML = homeData['text-content'];
-
-    //Invokes function to determine if Read More button should be displayed
     displayToggleReadMoreButton(content);
 }
 

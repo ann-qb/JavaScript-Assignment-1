@@ -5,15 +5,15 @@ get("./api/menu.json", loadMenu);
 function loadMenu(menuData) {
     const list = document.createElement('ul');
 
-    for (let eachMenuData of menuData){
+    for (let menuDataObj of menuData){
         const listItem = document.createElement('li');
         const listItemAnchor = document.createElement('a');
-        if (eachMenuData['not_found'] === true) {
+        if (menuDataObj['not_found'] === true) {
             listItemAnchor.href = '404.html';
         } else {
-            listItemAnchor.href = eachMenuData['path'];
+            listItemAnchor.href = menuDataObj['path'];
         }
-        listItemAnchor.innerHTML = eachMenuData['label'];
+        listItemAnchor.innerHTML = menuDataObj['label'];
         listItem.appendChild(listItemAnchor);
         list.appendChild(listItem);
     }
@@ -59,9 +59,9 @@ searchBar.addEventListener('keyup', highlightSearch);
 function highlightSearch() {
     const searchValue = searchBar.value;
     const pageContent = document.querySelector('#page-content').children;
-    for (let eachChild of pageContent) {
-        let content = eachChild.textContent;
-        content.indexOf(searchValue) != -1 ? eachChild.innerHTML = content.replaceAll(searchValue, `<span id="highlight-search">${searchValue}</span>`) : eachChild.innerHTML = content;
+    for (let pageContentChildObj of pageContent) {
+        let content = pageContentChildObj.textContent;
+        content.indexOf(searchValue) != -1 ? pageContentChildObj.innerHTML = content.replaceAll(searchValue, `<span id="highlight-search">${searchValue}</span>`) : pageContentChildObj.innerHTML = content;
     }
 }
 
