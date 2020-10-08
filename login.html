@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMedia - Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div id="login-container">
+        <div id="login-card">
+            <div id="card-header">
+                <h1>RMedia</h1>
+            </div>
+            <div id="login-form">
+                <p id="fail-msg"></p>
+                <div class="form-div">
+                    <label for="firstName" class="label">User Name</label>
+                    <div class="input-div">
+                        <div class="input-group">
+                            <span class=icon-box><i class='fas fa-user'></i></span>
+                            <input type="text" autofocus required class="form-input" id="user-name">
+                        </div>
+                        <p class="error-msg" id="name-msg"></p>
+                    </div>
+                </div>
+                <div class="form-div">
+                    <label for="password" class="label">Password</label>
+                    <div class="input-div">
+                        <div class="input-group">
+                            <span class=icon-box><i class='fas fa-lock'></i></span>
+                            <input type="password" required class="form-input" id="password">
+                        </div>
+                        <p class="error-msg" id="password-msg"></p>
+                    </div>
+                </div>
+                <div class="form-div">
+                    <input type="submit" value="Login" class="form-input" id="login-btn" onclick="login()">
+                </div>
+                <div>
+                    <p id="register-link">Not registered? <a href="register.html">Create an account</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/utility.js"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>

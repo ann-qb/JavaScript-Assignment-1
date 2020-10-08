@@ -6,15 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
 </head>
 
 <body>
-    <header class="header-div">
+    <header>
         <div class="container flex-box">
             <h1>
                 <a href=""><img src="images/logo.jpg" alt="RMedia"></a>
             </h1>
-            <input type="search" name="search" id="search" placeholder="Search...">
+            <div id="search-account">
+                <input type="search" name="search" id="search" placeholder="Search...">
+                <div class="flex-box" id="account-sec">
+                    <p id="user-name"></p>
+                    <button onclick="confirmLogOut()" id="logout-btn"><span id="logout-icon"><i class='fas fa-sign-out-alt'></i></span></button>
+                </div>
+            </div>
         </div>
     </header>
     <div class="content">
@@ -44,50 +52,10 @@
                 <div id="bottom-sec">
                     <table>
                         <thead>
-                            <tr>
-                                <th>Lorem</th>
-                                <th>Lorem</th>
-                                <th>Lorem</th>
-                                <th>Lorem</th>
+                            <tr id="table-heading">
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>Lorem</td>
-                                <td>Lorem</td>
-                                <td>Lorem</td>
-                                <td><input type="button" value="Apply Now"></td>
-                            </tr>
-                            <tr>
-                                <td>Lorem</td>
-                                <td>Lorem</td>
-                                <td>Lorem</td>
-                                <td><input type="button" value="Apply Now"></td>
-                            </tr>
-                            <tr>
-                                <td>Lorem</td>
-                                <td>Lorem</td>
-                                <td>Lorem</td>
-                                <td><input type="button" value="Apply Now"></td>
-                            </tr>
-                            <tr>
-                                <td>Lorem</td>
-                                <td>Lorem</td>
-                                <td>Lorem</td>
-                                <td><input type="button" value="Apply Now"></td>
-                            </tr>
-                            <tr>
-                                <td>Lorem</td>
-                                <td>Lorem</td>
-                                <td>Lorem</td>
-                                <td><input type="button" value="Apply Now"></td>
-                            </tr>
-                            <tr>
-                                <td>Lorem</td>
-                                <td>Lorem</td>
-                                <td>Lorem</td>
-                                <td><input type="button" value="Apply Now"></td>
-                            </tr>
+                        <tbody id="table-body">
                         </tbody>
                     </table>
                 </div>
@@ -109,10 +77,25 @@
             </ul>
         </div>
     </footer>
+
+    <div class="modal" id="log-out">
+        <div class="modal-content" id="logout-popup">
+            <div class="card-header">
+                <h2>Are you sure you want to log out?</h2>
+            </div>
+            <div id="popup-card">
+                <button onclick="cancelLogOut()" id="cancel-logout">No</button>
+                <button onclick="logOut()" id="confirm-logout">Yes</button>
+            </div>
+        </div>
+    </div>
+
+    
     <script src="js/utility.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/loadtable.js"></script>
     <script src="js/blogposts.js"></script>
-    <script src="js/common.js"></script>
+    
 </body>
 
 </html>

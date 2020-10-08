@@ -1,0 +1,145 @@
+/*****************************
+        1. GENERAL
+*****************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*****************************
+        2. BODY
+*****************************/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+#login-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    /* margin: 80px auto; */
+    width: 340px;
+    height: 375px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+#card-header {
+    background-color: #66c5e4;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px 10px;
+    color: #ffffff;
+}
+
+#login-form {
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    padding: 20px 18px 30px;
+    margin: auto;
+}
+
+.form-div {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 0 20px;
+    margin: 10px 0;
+}
+
+.label {
+    margin-bottom: 8px;
+}
+
+.input-div {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.input-group {
+    position: relative;
+}
+
+.icon-box {
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    opacity: 60%;
+}
+
+.form-input {
+    text-indent: 20px;
+    width: 100%;
+    height: 30px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #afafaf;
+}
+
+.form-input:focus {
+    border: 1px solid #1A73E8;
+}
+
+.form-input:hover {
+    border: 1px solid #000000;
+}
+
+.error-msg {
+    color: #ff0000;
+    font-size: 13px;
+    padding: 4px 8px;
+}
+
+#login-btn {
+    cursor: pointer;
+    color: #ffffff;
+    font-size: medium;
+    text-indent: 0;
+    align-self: center;
+    border: 1px solid #ffffff;
+    background-color: #66c5e4;
+}
+
+#login-btn:hover {
+    background-color:  #08b0db;
+}
+
+#fail-msg {
+    margin-bottom: 8px;
+    color: #ff0000;
+    padding: 0 20px;
+}
+
+#register-link {
+    text-align: center;
+    font-size: 13px;
+}
+
+/*****************************
+        3. MEDIA QUERIES
+*****************************/
+
+@media (max-width:375px) {
+    #login-card {
+        width: 100%;
+    }
+    #login-form {
+        padding: 35px 10px 20px;
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "columnConfig": [
+        {
+            "title": "Office",
+            "sortable": true,
+            "type": "string",
+            "id": "office"
+        },
+        {
+            "title": "Address",
+            "sortable": false,
+            "type": "string",
+            "id": "address"
+        },
+        {
+            "title": "Location",
+            "sortable": true,
+            "type": "string",
+            "id": "location"
+        },
+        {
+            "title": "Contact",
+            "sortable": false,
+            "type": "number",
+            "id": "contact"
+        }
+    ],
+    "data": [
+        {
+           "office": "Office 1",
+           "address": "Cyber Tower, Park Avenue",
+           "location": "Bangalore",
+           "contact": "9823237876"
+        },
+        {
+            "office": "Office 4",
+            "address": "Regent Building, Main Street",
+            "location": "Kochi",
+            "contact": "9823090988"
+         },
+         {
+            "office": "Office 2",
+            "address": "Hampton Complex, Kennedy Junction",
+            "location": "Trivandrum",
+            "contact": "9898671176"
+         },
+         {
+            "office": "Office 3",
+            "address": "Kalaam Centre, Avenue Junction",
+            "location": "Calicut",
+            "contact": "9821117876"
+         }           
+    ]
+}

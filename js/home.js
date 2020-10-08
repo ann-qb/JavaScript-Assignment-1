@@ -1,35 +1,11 @@
-//import {get} from "./utility.js";
-
-const textContentMaxHeight = '210px';
-
-// For reference:
-// const homePageData = new XMLHttpRequest();
-// homePageData.open("GET", "./api/home.json");
-// homePageData.send();
-// homePageData.addEventListener("load", loadHomeData);
-
+const textContentMaxHeight = '205px';
 get("./api/home.json", loadHomeData);
 
 //Loads homepage text content
 function loadHomeData(homeData) {
     const content = document.querySelector('#page-content');
     content.innerHTML = homeData['text-content'];
-
-    loadColumnHeaders(homeData['table-headings']);
     displayToggleReadMoreButton(content);
-}
-
-
-
-//Loads column headers for table
-function loadColumnHeaders(tableHeadings) {
-    const headingRow = document.querySelector('#table-heading');
-    const numOfColumnHeaders = tableHeadings.length;
-    for (let i = 0; i < numOfColumnHeaders; i++) {
-        const columnHeader = document.createElement('th');
-        columnHeader.innerText = tableHeadings[i];
-        headingRow.appendChild(columnHeader);
-    }
 }
 
 //Displays read more button if there is text content overflow
@@ -41,7 +17,6 @@ function displayToggleReadMoreButton(content) {
         toggleReadButton.innerHTML = 'Read More';
     }
 }
-
 
 let maxHeight; //Stores original height of text content's div container
 

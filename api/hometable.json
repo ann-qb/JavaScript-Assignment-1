@@ -1,0 +1,78 @@
+{
+    "columnConfig": [
+        {
+            "title": "Job Id",
+            "sortable": true,
+            "type": "number",
+            "id": "jobId"
+        },
+        {
+            "title": "Job Title",
+            "sortable": true,
+            "type": "string",
+            "id": "jobTitle"
+        },
+        {
+            "title": "Details",
+            "sortable": false,
+            "type": "link",
+            "id": "details"
+        },
+        {
+            "title": "Last Date",
+            "sortable": true,
+            "type": "date",
+            "id": "lastDate"
+        },
+        {
+            "title": "Status",
+            "sortable": false,
+            "type": "button",
+            "id": "status"
+        }
+    ],
+    "data": [
+        {
+            "jobId": 170,
+            "jobTitle": "Senior DevOps Engineer",
+            "details": "https://www.google.com",
+            "lastDate": "2020-12-03",
+            "status": "open"
+        },
+        {
+            "jobId": 161,
+            "jobTitle": "Python Developer",
+            "details": "https://www.google.com",
+            "lastDate": "2020-09-01",
+            "status": "closed"
+        },
+        {
+            "jobId": 214,
+            "jobTitle": "UI Designer",
+            "details": "https://www.google.com",
+            "lastDate": "2020-12-10",
+            "status": "open"
+        },
+        {
+            "jobId": 383,
+            "jobTitle": "Database Developer",
+            "details": "https://www.google.com",
+            "lastDate": "2020-09-02",
+            "status": "open"
+        },
+        {
+            "jobId": 565,
+            "jobTitle": "System Administrator",
+            "details": "https://www.google.com",
+            "lastDate": "2020-12-01",
+            "status": "open"
+        },
+        {
+            "jobId": 713,
+            "jobTitle": "Software Tester",
+            "details": "https://www.google.com",
+            "lastDate": "2020-12-11",
+            "status": "open"
+        }
+    ]
+}

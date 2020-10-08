@@ -1,26 +1,4 @@
-//import {post} from './utility.js';
-
-//For future reference:
-// const formField = getElementsByClassName('.form-field');
-// formField.addEventListener('click', function() {
-//     for(let i=0; i<formField.length; i++) {
-//         if(this.style.border === '1px solid #ff0000') {
-//             this.style.border = '#ffffff';
-//         }
-//     }
-// });
-
-//For future reference:
-// document.querySelectorAll('.form-field').forEach(item => {
-//     item.addEventListener('click', event => {
-//         console.log(item.style);
-//         if(item.style.border === '1px solid #ff0000') {
-//             console.log("hello");
-//             item.style.border = '#ffffff';
-//         }
-//     })
-// })
-
+//Acceptable input field formats
 const nameFormat = /^[A-Za-z][A-Za-z\s]{7,24}$/;
 const phoneNoFormat = /^[1-9][0-9]{9}$/;
 const mailFormat = /^[a-zA-Z0-9.]+@[a-zA-Z]+(?:\.[a-zA-Z]+)*$/;
@@ -33,23 +11,14 @@ function validateSend() {
     const email = emailValidate();
     const message = messageValidate();
 
-    let reqObj;
+
     if (name && phoneNumber && email && message) {
+        let reqObj;
         reqObj = { name, phoneNumber, email, message };
         reqObj = JSON.stringify(reqObj);
         console.log(reqObj); //Prints form data to console
-
-        //For reference:
-        // const xhrObj = new XMLHttpRequest();
-        // xhrObj.open("POST", "nowhere.com");
-        // xhrObj.send(reqObj);
-
         post("sendmessage.com", reqObj); //Mock API call
     }
-
-    //For future reference:
-    // let formData = new FormData(contact-form);
-    // const name = formData.get('name'); 
 }
 
 //Validates name field

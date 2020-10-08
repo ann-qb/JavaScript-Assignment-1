@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMedia - Register</title>
+    <link rel="stylesheet" href="css/register.css">
+    <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+</head>
+
+<body>
+
+    <div id="register-container">
+        <div id="register-card">
+            <div class="card-header">
+                <h1>RMedia</h1>
+            </div>
+            <div id="register-form">
+                <div class="form-div">
+                    <label for="firstName" class="label">First Name</label>
+                    <div class="input-div">
+                        <div class="input-group">
+                            <span class=icon-box><i class='fas fa-user'></i></span>
+                            <input type="text" autofocus required class="form-input" id="first-name">
+                        </div>
+                        <p class="error-msg" id="fname-msg"></p>
+                    </div>
+                </div>
+                <div class="form-div">
+                    <label for="lastName" class="label">Last Name</label>
+                    <div class="input-div">
+                        <div class="input-group">
+                            <span class=icon-box><i class='fas fa-user'></i></span>
+                            <input type="text" required class="form-input" id="last-name">
+                        </div>
+                        <p class="error-msg" id="lname-msg"></p>
+                    </div>
+                </div>
+                <div class="form-div">
+                    <label for="dateOfBirth" class="label">Date of Birth</label>
+                    <div class="input-div">
+                        <div class="input-group">
+                            <span class="icon-box"><i class='fas fa-calendar-alt'></i></span>
+                            <input type="date" required class="form-input" id="dob">
+                        </div>
+                        <p class="error-msg" id="dob-msg"></p>
+                    </div>
+                </div>
+                <div class="form-div">
+                    <p class="label">Gender</p>
+                    <div class="input-div">
+                        <div id="gender-labels">
+                            <div class="radio-div">
+                                <input type="radio" id="male" name="gender" value="male">
+                                <label for="male">Male</label>
+                            </div>
+                            <div class="radio-div">
+                                <input type="radio" id="female" name="gender" value="female">
+                                <label for="female">Female</label>
+                            </div>
+                            <div class="radio-div">
+                                <input type="radio" id="other" name="gender" value="other">
+                                <label for="other">Other</label>
+                            </div>
+                        </div>
+                        <p class="error-msg" id="gender-msg"></p>
+                    </div>
+                </div>
+                <div class="form-div">
+                    <label for="password" class="label">Password</label>
+                    <div class="input-div">
+                        <div class="input-group">
+                            <span class=icon-box><i class='fas fa-lock'></i></span>
+                            <input type="password" required class="form-input" id="password">
+                        </div>
+                        <p class="error-msg" id="password-msg"></p>
+                    </div>
+                </div>
+                <div class="form-div">
+                    <label for="confirm-password" class="label">Confirm Password</label>
+                    <div class="input-div">
+                        <div class="input-group">
+                            <span class=icon-box><i class='fas fa-lock'></i></span>
+                            <input type="password" required class="form-input" id="confirm-password">
+                        </div>
+                        <p class="error-msg" id="confirm-msg"></p>
+                    </div>
+                </div>
+                <div class="form-div" id="final-field">
+                    <div id="tc">
+                        <input type="checkbox" id="tc-checkbox">
+                        <p id="terms-label">Accept Terms and Conditions</p>
+                    </div>
+                    <p class="error-msg" id="tc-accept"></p>
+                    <input type="submit" value="Register" class="form-input" id="register-btn"
+                        onclick="validateRegistration()">
+                    <p id="login-link">Already have an account? <a href="login.html">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="register-success">
+        <div class="modal-content" id="success-popup">
+            <div class="card-header">
+                <h2>RMedia</h2>
+            </div>
+            <div id="popup-card">
+                <img src="images/blue-tick-th.png" alt="Check Mark" id="success-img">
+                <h2>Registration Successful!</h2>
+                <button><a href="login.html">Go to Login</a></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/utility.js"></script>
+    <script src="js/register.js"></script>
+</body>
+
+</html>

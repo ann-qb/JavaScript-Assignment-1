@@ -1,18 +1,18 @@
-//import {get} from "./utility.js";
+//Function identifies current page and makes appropriate API call
+function fetchBlogPostsDetails() {
+    const currentPage = currentPageIdentifier();
+    get('./api/' + currentPage + 'BlogPosts.json', loadBlogPosts);
+}
 
-get("./api/blogposts.json", loadBlogPosts);
+fetchBlogPostsDetails();
 
-//Load blog posts dynamically from blogposts.json
+//Loads blog posts dynamically for each page from its corresponding blogposts.json file
 function loadBlogPosts(blogPostsData) {
-    const numberOfBlogPosts = blogPostsData.length;
     const posts = document.querySelector('#posts');
-    for (let i = 0; i < numberOfBlogPosts; i++) {
+    for (let blogPostObj of blogPostsData) {
         const listItem = document.createElement('li');
-        const listItemAnchor = document.createElement('a');
-        listItemAnchor.href = blogPostsData[i]['href'];
-        const listItemAnchorImage = document.createElement('img');
-        listItemAnchorImage.src = blogPostsData[i]['img-path'];
-        listItemAnchorImage.alt = blogPostsData[i]['alt'];
+        const listItemAnchor = createNewAnchorElement(blogPostObj['href']);
+        const listItemAnchorImage = createNewImgElement(blogPostObj['img-path'], blogPostObj['alt']);
         listItemAnchor.appendChild(listItemAnchorImage);
         listItem.appendChild(listItemAnchor);
         posts.appendChild(listItem);
